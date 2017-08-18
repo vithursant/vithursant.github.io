@@ -1018,10 +1018,6 @@ video {
   margin: 0;
 }
 
-.no-top-border {
-  border-top: 0!important;
-}
-
 .border-left,.border-left-right,.border-right {
   border-top: none;
   border-bottom: none;
