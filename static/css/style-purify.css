@@ -2403,11 +2403,11 @@ body.landing-page {
 }
 
 .landing-page .header-back.one {
-  background: url(../assets/img/landing/graphcore.jpg) 50% 0 no-repeat;
+  background: url(../img/landing/header_one.jpg) 50% 0 no-repeat;
 }
 
 .landing-page .header-back.two {
-  background: url(../assets/img/landing/graphcore2.jpg) 50% 0 no-repeat;
+  background: url(../img/landing/header_two.jpg) 50% 0 no-repeat;
 }
 
 .landing-page .carousel {
