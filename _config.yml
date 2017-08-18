@@ -20,7 +20,7 @@ author:  # change following line to your infomation.
   facebook_username: vithursant  # Leave blank if you don't have now
   twitter_username:  # Leave blank if you don't have now
   email: vithursan.thangarasa@gmail.com  # Leave blank if you don't have now
-  cv: /static/assets/img/resume/resume.pdf  # A online CV can be printed as PDF, leave blank if you don't have now
+  cv: https://storage.googleapis.com/wzukusers/user-28691691/documents/597968ef54da6tPIcYQr/VithursanT-Resume.pdf # A online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
