@@ -8,15 +8,16 @@
   img: /static/assets/img/landing/plouffe.png
   desc: "One of two contributors for an open-source Deep Learning API in TensorFlow that can be used for time-series analysis and automatic feature extraction tasks outside of NLP"
 
-- name: Python
+- name: Solar-Powered Roadside Monitoring System
   i18n: cpython
-  gh_user: python
-  repo: cpython
+  gh_user: vithursant
+  repo: Roadside-Monitoring-System
   img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I use another request to get repo's information.
+  desc: "Monitors the presence of construction workers using computer vision and Beacon technology, then adjusts an industrial speed-limit sign in real-time"
 
-- name: Google
-  i18n: google
-  url: https://google.com
+- name: Personal Weather Station
+  i18n: personal
+  gh_user: vithursant        
+  repo: sensortag-weather 
   img: /static/assets/img/landing/google.png
-  desc: This is another project.
+  desc: "Uses the Texas Instruments Sensor Tag as a weather station on a Raspberry Pi 3. Data is stored in a temporary database or can be transmitted to Google Sheets via the Google Drive API"
