@@ -23,11 +23,11 @@ author:  # change following line to your infomation.
   cv: https://storage.googleapis.com/wzukusers/user-28691691/documents/597968ef54da6tPIcYQr/VithursanT-Resume.pdf # A online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
+    - name: fa-asterick
+    - name: fa-asterick
   skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
+    - name: fa-asterick
+    - name: fa-asterick
   desc: "My name is Vithursan Thangarasa, friends and family call me Vithu. I am a Deep Learning Graduate Research Assistant who is working towards an MASc under the supervision of Dr. Graham W. Taylor at University Guelph's Machine Learning Research Group (MLRG). I am interested in developing novel deep learning (DL) algorithms and exploiting high performance computing (HPC) technologies for large-scale machine learning applications.
         
         I completed my BEng in Engineering Systems and Computing at the University of Guelph. Here, I focused on designing integrated computer based engineering systems which included software development, computer hardware design, mechanics and energy transfer, signal processing and digital process control."   # Describe yourself.
