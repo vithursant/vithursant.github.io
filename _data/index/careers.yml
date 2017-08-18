@@ -1,29 +1,71 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - job:
+    detail: University of Guelph - Machine Learning Research Group (MLRG)
+    i18n: company_a_job
+  name:
+    detail: Graduate Research Assistant 
+    i18n: company_a
+  date:
+    detail: "May 2017"
+    i18n: company_a_date
+  desc:
+    detail: "Research focused on novel deep learning algorithms and high performance computing (HPC)"
+    i18n: company_a_desc
+  icon: fa-plus-square
+
+- job:
     detail: Scotiabank - Artificial Intelligence & Machine Learning
     i18n: company_a_job
   name:
     detail: Data Scientist 
     i18n: company_a
   date:
-    detail: "Sept 2016"
+    detail: "Sept 2016 - Dec 2016"
     i18n: company_a_date
   desc:
     detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence"
     i18n: company_a_desc
   icon: fa-plus-square
 
-- name:
-    detail: Company B
-    i18n: company_b
-  desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+- job:
+    detail: ON Semiconductor - Medical & Wireless Products Division
+    i18n: company_a_job
+  name:
+    detail: Hardware & Systems Developer 
+    i18n: company_a
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
-  job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail: "May 2016 - Aug 2016"
+    i18n: company_a_date
+  desc:
+    detail: "Implemented a power supply and clock calibration firmware library for RSL10, an ultra-low power multi-protocol BLE 5.0 SoC"
+    i18n: company_a_desc
+  icon: fa-plus-square
+
+- job:
+    detail: Evertz Microsystems - Canadian Headquarters
+    i18n: company_a_job
+  name:
+    detail: Software Engineer (Video)
+    i18n: company_a
+  date:
+    detail: "Jan 2015 - Aug 2015"
+    i18n: company_a_date
+  desc:
+    detail: "Designed a Bit Estimator module with 91% accuracy, as well as an Artifact Reduction Filter for the HEVC encoder software library"
+    i18n: company_a_desc
+  icon: fa-plus-square
+
+- job:
+    detail: Jamdeo Ltd. (Flextronics & HiSense Venture)
+    i18n: company_a_job
+  name:
+    detail: Mobile Application Developer (Android)
+    i18n: company_a
+  date:
+    detail: "May 2014 - Aug 2014"
+    i18n: company_a_date
+  desc:
+    detail: "Worked with the Architecture & Technology team to develop security libraries for secure D2D communication in the core of an Internet of Things (IoT)-based Android application"
+    i18n: company_a_desc
   icon: fa-plus-square
