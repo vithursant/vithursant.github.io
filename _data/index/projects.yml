@@ -1,12 +1,12 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
+- name: Sequence-to-Sequence Regression
   i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
+  gh_user: vithursant
+  repo: Seq2Seq_PlouffeRainbows 
   img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+  desc: "One of two contributors for an open-source Deep Learning API in TensorFlow that can be used for time-series analysis and automatic feature extraction tasks outside of NLP"
 
 - name: Python
   i18n: cpython

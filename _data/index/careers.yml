@@ -24,7 +24,7 @@
     detail: "Sept 2016 - Dec 2016"
     i18n: company_a_date
   desc:
-    detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence"
+          detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence. I spent a lot of my time preparing dialogue datasets for training data and contributed to the generative conversational model. Used: TensorFlow, Anaconda, NLP, Django, Docker, AWS."
     i18n: company_a_desc
   icon: fa-plus-square
 
@@ -38,7 +38,7 @@
     detail: "May 2016 - Aug 2016"
     i18n: company_a_date
   desc:
-    detail: "Implemented a power supply and clock calibration firmware library for RSL10, an ultra-low power multi-protocol BLE 5.0 SoC"
+          detail: "I worked mostly independently on a power and clock calibartion library for RSL10, ON Semiconductor's latest multi-protocol Bluetooth Low Energy (BLE) 5.0 SoC. Also performed hardware and firmware verification for the chip's BLE 5.0 Security Stack: GATT/GAP pairing and bonding process. Used: C, ARM Assembly, Eclipse, J-Link, nRF Studio."
     i18n: company_a_desc
   icon: fa-plus-square
 
@@ -52,7 +52,7 @@
     detail: "Jan 2015 - Aug 2015"
     i18n: company_a_date
   desc:
-    detail: "Designed a Bit Estimator module with 91% accuracy, as well as an Artifact Reduction Filter for the HEVC encoder software library"
+    detail: "Developed a Bit Estimator algorithm with 91% accuracy, as well as an Artifact Reducing Filter for the HEVC encoder software library. I researched and implemented a novel Capped Variable Bitrate (CVBR) algorithm for Real-Time H.264 video encoders and transcoders. Used: Python, C, Visual Studio, SVN."
     i18n: company_a_desc
   icon: fa-plus-square
 
@@ -66,6 +66,6 @@
     detail: "May 2014 - Aug 2014"
     i18n: company_a_date
   desc:
-    detail: "Worked with the Architecture & Technology team to develop security libraries for secure D2D communication in the core of an Internet of Things (IoT)-based Android application"
+    detail: "I worked with the Architecture & Technology team to design security libraries for secure D2D communication in the core of an Internet of Things (IoT)-based Android application. Explored Smart Home Automation APIs from Nest, Honeywell and Apple to be used for the app. Used: C, Android NDK, GDB."
     i18n: company_a_desc
   icon: fa-plus-square
