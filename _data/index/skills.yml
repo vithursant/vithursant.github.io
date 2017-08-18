@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Deep Learning, Hardwork, TensorFlow, NLP, Python, DevOps, C, Embedded Systems, HPC, Hardwork
-percentage: 75, 100, 80, 70, 90, 78, 82, 75, 74, 100 
+aspects: Deep Learning, Python, TensorFlow, NLP, Hardwork, DevOps, AWS, Embedded Systems, HPC, C
+percentage: 80, 90, 80, 72, 100, 78, 82, 76, 74, 80 
