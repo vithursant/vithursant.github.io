@@ -1,14 +1,14 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name:
+- job:
+    detail: "Data Scientist"
+    i18n: company_a_job
+  name:
     detail: Scotiabank - Artificial Intelligence & Machine Learning
     i18n: company_a
   date:
     detail: "Sept 2016"
     i18n: company_a_date
-  job:
-    detail: "`Data Scientist"
-    i18n: company_a_job
   desc:
     detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence"
     i18n: company_a_desc
