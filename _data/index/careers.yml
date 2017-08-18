@@ -10,7 +10,7 @@
     detail: "`Data Scientist"
     i18n: company_a_job
   desc:
-          detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence"
+    detail: "Proposed and worked on an AI-Powered Financial Chatbot to provide significant business value for Scotiabank's Customer Intelligence"
     i18n: company_a_desc
   icon: fa-plus-square
 
