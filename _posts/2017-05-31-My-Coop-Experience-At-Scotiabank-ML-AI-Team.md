@@ -4,7 +4,7 @@ title: "My Co-op Experience At Scotiabank's ML and AI Team"
 date: 2017-05-31
 desc: "My Co-op Experience At Scotiabank's ML and AI Team"
 keywords: "deep learning,tensorflow,fintech,career,blog"
-categories: [Deep Learning]
+categories: [AI]
 tags: [deep learning,fintech]
 icon: icon-html
 ---
@@ -44,7 +44,7 @@ Obviously, being a keener co-op I ask, *"Sure, sounds good. What's the project?"
 
 And he replies, *"Its a Chatbot project for financial services."* 
 
-Again, obviously, I'm going to say *"that's awesome"*, put my current work on hold and got started right away. But, who knew this would end up being the most challenging project I've ever worked on in my life? (Hint: Nobody.)
+Again, obviously, I'm going to say *"that's awesome"*, put my current work on hold and got started right away. But, who knew this would end up being the most challenging project I've ever worked on in my life? *(Hint: Nobody.)*
 
 Initially, my work involved a lot of preliminary research in designing a commercial chatbot. First of all, you may ask, what are these chatbots? According to my Google Assistant,
 
