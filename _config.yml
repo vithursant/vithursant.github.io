@@ -14,7 +14,7 @@ author:  # change following line to your infomation.
   name: Vithursan Thangarasa  # Be used at blog posts' author.
   first_name: Vithursan  # Be used at index page about me section.
   last_name: Thangarasa  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/me.jpg  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/me.png  # upload your avatar at directory and edit it.
   github_username: vithursant  # Leave blank if you don't have now
   linkedin_id: vithursant # Leave blank if you don't have now
   facebook_username: vithursant  # Leave blank if you don't have now
