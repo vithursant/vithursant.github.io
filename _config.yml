@@ -1,8 +1,8 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Vithursan Thangarasa's Deep Learning Blog
-description: Vithu's Deep Learning Blog and personal website.
+title: Home
+description: Vithu's DL Blog.
 keywords: Vithu,deep-learning,blog,Jekyll,github,gh-pages
 baseurl:  / # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://vithursant.github.io  # url should be 'http://<github_username>.github.io/homepage' as before
