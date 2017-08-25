@@ -1,0 +1,14 @@
+- org: MASc, Machine Learning & Artificial Intelligence
+  role: University of Guelph
+  location: Guelph, ON
+  when: May 2017 - Present
+  bullets:
+    - 'Advisor: Dr. Graham W. Taylor'
+    - 'Research Focus: Designing novel deep learning algorithms and exploiting high-performance computing technologies for large-scale machine learning'
+
+- org: BEng, Engineering Systems & Computing (Co-op)
+  role: University of Guelph
+  location: Guelph, ON
+  when: Sept 2012 - Apr 2017
+  bullets:
+    - 'Focused on designing integrated computer based engineering systems which included software development, computer hardware design, mechanics and energy transfer, signal processing and digital process control'
