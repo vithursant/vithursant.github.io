@@ -31,17 +31,17 @@ navigation: navigation
 analytics: UA-104881273-1
 
 # Jekyll assets gem
-#assets:
-#  dirname: assets
-#  baseurl: /assets/
-#  css_compressor: yui
-#  js_compressor: yui
-#  cachebust: hard
-#  cache: false
-#  gzip: nil # Cloudflare will do this
-#  sources:
-#    - _assets/javascripts
-#    - _assets/stylesheets
+assets:
+  dirname: assets
+  baseurl: /assets/
+  css_compressor: yui
+  js_compressor: yui
+  cachebust: hard
+  cache: false
+  gzip: nil # Cloudflare will do this
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
 
 # Files in this repo that we don't want to go to the web
 exclude: [
