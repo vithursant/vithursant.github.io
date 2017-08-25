@@ -1,23 +1,30 @@
-- org:  OpenLate Meetup Group
-  role: Founder and Organizer
-  location: San Francisco, CA
-  when: Feb 2014 - Now
+- org: Sequence-to-Sequence Regression
+  role: Machine Learning Engineer
+  location: Guelph, ON
+  when: Mar 2017 - Apr 2017 
   bullets: 
-    - Started a biweekly freeform hack night hosted by OpenDNS.
-    - Grew to over 500 members with 50 event attendees in San Francisco.
-    - Meetup [expanded to Vancouver](http://blog.opendns.com/2014/04/03/code-community-openlate-goes-international/).
+    - One of two machine learning engineers for an open-source Deep Learning API in TensorFlow that can be used for time-series analysis and automatic feature extraction tasks outside of NLP
+    - GitHub [Link](https://github.com/ThorJonsson/Seq2Seq_PlouffeRainbows)
 
-- org:  Washington University Tech Entrepreneurs
-  role: Director, wute.vc
-  location: St. Louis, MO
-  when: Sept 2011 - May 2013
-  bullets: 
-    - Launched [wute.vc](http://wute.vc), a lecture series connecting students with venture capitalists and seasoned entrepreneurs.
-    - Organized and managed events with Reddit Founder Alexis Ohanian, Twitter Founder Jack Dorsey, Square Founder Jim McKelvey, Venture Capitalist and Author Brad Feld, and Venture Capitalist Albert Wenger.
+- org: Solar-Powered Roadside Monitoring System
+  role: Technical Project Manager
+  location: Guelph, ON
+  when: Sept 2016 - May 2017
+  bullets:
+    - 'Advisor: [Dr. Radu Muresan](https://www.uoguelph.ca/engineering/content/faculty/radu-muresan)'
+    - Lead a team of 5 to develop an real-time system which monitors the presence of construction workers using computer vision and Beacon technology, then adjusts the speed-limit sign in real-time
+    - GitHub [Link](https://github.com/vithursant/Roadside-Monitoring-System)
 
-- org:  WUSauce Dance Team
-  role: Communication Chair
-  location: St. Louis, MO
-  when: Sept 2010 - May 2013
-  bullets: 
-    - Performed with audition-only salsa dance team, taught salsa lessons, and participated in community outreach.
+- org: Posture Correction Smart Apparel
+  role: Lead Design Engineer
+  location: Guelph, ON
+  when: Jan 2016 - Apr 2016
+  bullets:
+    - Designed a Smart Shirt with built-in all-textile sensors to improve a person’s posture and provide biometric monitoring on an Android mobile app via Bluetooth Low Energy
+
+- org: Ultra-Compact AES-128 IP Core
+  role: Hardware Engineer
+  location: Guelph, ON
+  when: Mar 2016 - Apr 2016
+  bullets:
+    - Created a synthesizable Verilog implementation of AES-128 using Rijndael cipher encoding and decoding for an Actel FPGA

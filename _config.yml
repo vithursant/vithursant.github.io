@@ -1,24 +1,25 @@
 # Use this file to control the main attributes of the website
 
 # You
-name: Philip I. Thomas
+name: Vithursan Thangarasa
 
 # Title for your site as it will appear in google
 # e.g. Resume, Curriculum Vitae, Work History
-title: Resume for Philip I. Thomas
+title: Vithursan Thangarasa
 
 # SEO description
-description: Digital resume for Philip I. Thomas, explorer and engineer in San Francisco.
+description: Digital resume for Vithursan Thangarasa, AI practioner and engineer in Toronto, Canada.
 
 # URL of this resume
-url: 'https://jekyll-resume.philipithomas.com'
+url: 'https://vithursant.github.io'
 
 # URL of your personal website (make same as URL if you don't have one)
-personal: 'https://www.philipithomas.com'
+personal: 'http://www.vithursant.com'
 
 # these should be pretty self-explanatory :-P
-email: mail@philipithomas.com
-twitter: philipithomas
+email: vithursant.thangarasa@gmail.com
+#twitter: 
+linkedin: vithursant
 
 # Show this in the footer
 copyright: All rights reserved.
@@ -27,20 +28,20 @@ copyright: All rights reserved.
 navigation: navigation
 
 # Google analytics ID: UA-XXXXX-X
-analytics: UA-9939917-25
+analytics: UA-104881273-1
 
 # Jekyll assets gem
-assets:
-  dirname: assets
-  baseurl: /assets/
-  css_compressor: yui
-  js_compressor: yui
-  cachebust: hard
-  cache: false
-  gzip: nil # Cloudflare will do this
-  sources:
-    - _assets/javascripts
-    - _assets/stylesheets
+#assets:
+#  dirname: assets
+#  baseurl: /assets/
+#  css_compressor: yui
+#  js_compressor: yui
+#  cachebust: hard
+#  cache: false
+#  gzip: nil # Cloudflare will do this
+#  sources:
+#    - _assets/javascripts
+#    - _assets/stylesheets
 
 # Files in this repo that we don't want to go to the web
 exclude: [

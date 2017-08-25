@@ -16,10 +16,14 @@
   id: projects
   layout: block
 
-- name: Skills
-  id: skills
+- name: Software Expertise
+  id: sskills
   layout: cloud
 
-- name: Honors
-  id: honors
+- name: Hardware Expertise
+  id: hskills
+  layout: cloud
+
+- name: Honours
+  id: honours
   layout: list
