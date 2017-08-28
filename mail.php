@@ -6,9 +6,9 @@
 	THIS FORM WAS BUILT TO WORK ON 'LOCAWEB' SERVERS, IT MAY NOT BE EFFECTIVE IN OTHER HOST SERVICE.
 	*/
 
- $para = "w.carlosjf@gmail.com"; //endereço de e-mail que vai RECEBER a mensagem (e-mail adress that will RECEIVE the message)
+ $para = "vithursan.thangarasa@gmail.com"; //endereço de e-mail que vai RECEBER a mensagem (e-mail adress that will RECEIVE the message)
  $assunto = "Contato pelo site"; 
- $emailsender = "walison@claudiakitfestas.com.br"; //serviço de e-mail que vai ENVIAR a mensagem (e-mail service that will SEND the message)
+ $emailsender = "vthangar@vithursant.com"; //serviço de e-mail que vai ENVIAR a mensagem (e-mail service that will SEND the message)
 	$nome = $_REQUEST['nome'];
 	$email = $_REQUEST['email'];
 	$numero = $_REQUEST['numero'];

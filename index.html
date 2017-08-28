@@ -340,7 +340,7 @@
   </div>
   
   <div class="row center">
-    <h5 class="header col s12">
+    <h5>
        <b>EXPERIENCE AND JOBS</b>
      </h5>
      <ul class="collapsible">
@@ -595,21 +595,85 @@
       <h5>
         CONTACT
       </h5>
-        <i class="mdi-action-home"></i>
-        Address
+      <div class="divider">
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="row">
+            <!-- FORMULARY SETTINGS -->
+            <form class="col s12" action="mail.php" method="POST">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">
+                    account_circle
+                  </i>
+                  <input id="first_name" type="text" class="validate" name="nome" required>
+                  <label for="first_name">
+                    Name
+                  </label>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">
+                      mail
+                    </i>
+                    <input id="email" type="email" class="validate" name="email" required>
+                    <label for="email">
+                      E-Mail
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">
+                      phone
+                    </i>
+                    <input id="icon_telephone" type="tel" class="validate" name="numero" required>
+                    <label for="icon_telephone">
+                      Phone Number
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">
+                      mode_edit
+                    </i>
+                    <textarea class="materialize-textarea" name="mensagem" required></textarea>
+                    <label for="textarea1">Message</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                  Send
+                  <i class="mdi-content-send right">
+                  </i>
+                </button>
+              </form>
+              <!-- END OF FORMULARY SETTINGS -->
+            </div>
+          </div>
         <br>
-      <p>
-        50 Stone Rd. East
-        <br>
-        Guelph, ON Canada • N1G 2W1
-      </p>
-        <i class="mdi-communication-email">
-        </i>
-        E-mail
-        <br>
-      <p>
-        vithursan"DOT"thangarasa"AT"gmail.com
-      </p>
+
+        <div class="col s12 m6 l6 contact-holder">
+        <h6>
+          <i class="mdi-action-home"></i>
+          Address
+        </h6>
+        <p>
+          50 Stone Rd. East
+          <br>
+          Guelph, ON Canada • N1G 2W1
+        </p>
+        <h6>
+          <i class="mdi-communication-email">
+          </i>
+          E-mail
+          <br>
+        </h6>
+        <p>
+          vithursan"DOT"thangarasa"AT"gmail.com
+        </p>
 
       <!-- <h6>
         <i class="mdi-hardware-phone-android">
@@ -619,20 +683,21 @@
       <p>
         111-222-1234
        --> 
-      <p>
-        <i class="mdi-action-open-in-browser">
-        </i>
-        Personal Website
-        <br>
-      <p>
-        <a href="http://www.vithursant.com" target="_blank">
-          vithursant.com
-        </a>
-      </p>
-      <br>
-      <br>
+        <p>
+          <h6>
+          <i class="mdi-action-open-in-browser">
+          </i>
+          Personal Website
+          </h6>
+        <p>
+          <a href="http://www.vithursant.com" target="_blank">
+            vithursant.com
+          </a>
+        </p>
+      <div>
     </div>    
-      
+    </div>
+
     <footer>
       <div class="footer-copyright" align="center">
         <div class="container">
