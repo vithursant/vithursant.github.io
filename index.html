@@ -1,516 +1,230 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Vithursan Thangarasa">
-    <title>Vithursan Thangarasa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body>
-      
-    <!-- PARALLAX CONFIGURATION -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<title>Victor Presumido</title>
 
-    <div class="parallax-container">
-      <div class="container" valign="bottom">
-        <br>
-        <br>
-        <br>
-        <br> <!-- SORRY ABOUT IT -->
-        <br>
-        <br>
-        <br>
-        <h1 class="header center teal-text text-lighten-2">
-          Vithu
-        </h1>
-        <div class="row center">
-          <div class="col s12 m3 l3">
-            <p> </p>
-          </div>
-          <h5 class="header col s12 m6 l6 light white-text">
-            ML/AI Researcher <br>
-            Systems Engineer <br>
-            Blogger
-          </h5>
-          <div class="col s12 m3 l3">
-            <p> </p>
-          </div>
-        </div>
-      <!-- JUST IN CASE IF YOU WANT A BUTTON HERE
-      <div class="row center">
-      <a href="#" class="btn-large waves-effect waves-light purple lighten-1">
-      Find more
-      </a>
-      </div>
-      -->
-      </div>
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+		<link href="assets/css/flaticon.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav class="z-depth-5">
+				<div class="nav-wrapper main-nav light-blue darken-4">
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a id="a-about" href="#about-me">About me</a></li>
+						<li><a id="a-contact" href="#contact-me">Contact me</a></li>
+						<li><a id="a-work" href="#work">Work Experience</a></li>
+						<li><a id="a-education" href="#education">Education</a></li>
+						<li><a id="a-blog" href="/blog">Blog</a></li>
+						<li><a id="a-resume" href="/resume.pdf">Resume</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a id="a-about" href="#about-me">About me</a></li>
+						<li><a id="a-contact" href="#contact-me">Contact me</a></li>
+						<li><a id="a-work" href="#work">Work Experience</a></li>
+						<li><a id="a-education" href="#education">Education</a></li>
+						<li><a id="a-blog" href="/blog">Blog</a></li>
+						<li><a id="a-resume" href="/resume.pdf">Resume</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<header id="top-bar" class="main-top"></header>
 
-      <div class="parallax">
-        <img src="images/parallax.jpg">
-      </div>
-    </div>
+		<div class="container container-main">
+			<div class="section content">
+				<!--   Icon Section   -->
+				<div class="row">
+					<div class="col s12 m12">
+						<div class="col s12 m4 left-side">
+							<img src="assets/images/user.jpg" alt="" class="circle user-img responsive-img">
+							<div class="block">
+								<h5 class="center light-blue-text text-darken-2">Victor Presumido</h5>
+								<p class="light center">Developer</p>
+							</div>
+							<hr>
+							<div class="block">
+								<h5 class="left-align" id="about-me"><i class="material-icons small">account_box</i> About me</h5>
+								<p>From Marilia, São Paulo, Brazil. I have been always fascinated by technology and have always wanted to be the creator of something. Nowadays this dream became true, I create code.</p>
+								<p>I'm not afraid of learning new things, taking new challenges, meeting new people, traveling. </p>
+							</div>
+							<div class="block">
+								<h5 class="left-align" id="contact-me"><i class="material-icons small">perm_phone_msg</i> Contact me</h5>
+								<p><i class="material-icons light-blue-text text-darken-3 tiny">pin_drop</i> Hamburg, Germany<br/>
+									<i class="material-icons light-blue-text text-darken-3 tiny">email</i> <a href="mailto:victor.presumido@gmail.com" class="light-blue-text text-darken-3" target="_blank">victor.presumido@gmail.com</a><br/>
+									<i class="material-icons light-blue-text text-darken-3 tiny">link</i> <a href="https://github.com/victorpre" class="light-blue-text text-darken-3" target="_blank">https://github.com/victorpre/</a>
+								</p>
+							</div>
+							<div class="block">
+								<h5 class="left-align" id="contact-me"><a href="resume.pdf"><i class="material-icons small">file_download</i> Resume</a></h5>
 
-    <!-- INFO AREA -->
-    
-    <div class="container about" align="center">
-      <br>
-      <h5>
-        ABOUT ME
-      </h5>
-      
-      <div class="divider">
-      </div>
-    
-      <br>
-    
-      <div class="row">
-        <div class="col s12 m4 l4">
-          <div class="card blue lighten-2">
-            <div class="card-content white-text">
-              <img src="images/me.png" width="128px" height="128px">
-              <p>
-                <b class="grey-text text-darken-4">
-                Vithursan Thangarasa
-                </b>
-                <br>
-                AI Enthusiast and Practitioner
-                <br>
-                Toronto, ON
-                <br>
-                Plays basketball, loves cake and is interested to explore and contribute as much as possible to the open-source community.
-              </p>
-            </div>
-            <div class="card-action blue lighten-3" class="center-align">
-              <!-- <a href="https://www.facebook.com/vithursant" target="_blank">
-                <img src="images/web-icons/Facebook.png" alt="Facebook">
-              </a> -->
-              <a href="http://vithursant.com">
-                <img src="images/web-icons/Internet.svg" width="32px" height="32px" alt="Personal Website">
-              </a>
-              <a href="https://github.com/vithursant" target="_blank">
-                <img src="images/web-icons/GitHubCol.svg" width="32px" height="32px" alt="GitHub">
-              </a>
-              <a href="mailto:vithursan.thangarasa@gmail.com">
-                <img src="images/web-icons/EmailCol.svg" width="32px" height="32px" alt="Email">
-              </a>
-              <a href="https://www.linkedin.com/in/vithursant/" target="_blank">
-                <img src="images/web-icons/LinkedInCol.svg" width="32px" height="32px" alt="LinkedIn">
-              </a>
-            </div>
-          </div>
-        </div>
+							</div>
+							<div class="block">
+								<h5 class="left-align"><i class="material-icons small">stars</i>
+									My Skills
+								</h5>
+								<h6>Ruby on Rails</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 90%;"></div>
+								</div>
+                <h6>Elixir Phoenix</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 75%;"></div>
+								</div>
+								<h6>Java</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 60%;"></div>
+								</div>
+								<h6>JavaScript</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 70%;"></div>
+								</div>
+								<h6>Swift 3</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 50%;"></div>
+								</div>
+								<h6>Git</h6>
+								<div class="progress">
+									<div class="progress-bar" style="width: 90%;"></div>
+								</div>
+							</div>
+							<div class="block social">
+								<h5 class="left-align"><i class="material-icons small">share</i> Social</h5>
+								<div class="col s3 m3 l3 social-icon"><a href="https://www.facebook.com/victorpre" class="light-blue-text text-darken-3" target="_blank"><img src="assets/images/facebook-box.png"></a></div>
+								<div class="col s3 m3 l3 social-icon"><a href="http://instagram.com/victorpre" class="light-blue-text text-darken-3" target="_blank"><img src="assets/images/instagram.png"></a></div>
+								<div class="col s3 m3 l3 social-icon"><a href="https://www.linkedin.com/in/victorpre" class="light-blue-text text-darken-3" target="_blank"><img src="assets/images/linkedin-box.png"></a></div>
+								<div class="col s3 m3 l3 social-icon"><a href="https://www.twitter.com/victorpre" class="light-blue-text text-darken-3" target="_blank"><img src="assets/images/twitter-box.png"></a></div>
+							</div>
+						</div>
 
-        <div class="col s12 m8 l8">
-          <blockquote>
-            <p>
-              My name is Vithursan Thangarasa, friends and family call me Vithu. I am working towards an MASc under the supervision of <a href="http://www.uoguelph.ca/~gwtaylor/">Dr. Graham W. Taylor</a> at University Guelph's Machine Learning Research Group (MLRG). I am interested in developing Continual/Lifelong Learning algorithms for Deep Neural Networks and exploiting high performance computing (HPC) technologies for large-scale machine learning applications.
-            </p>
-            <p>
-              I completed my BEng in Engineering Systems and Computing at the University of Guelph. Here, I focused on designing integrated computer based engineering systems which included software development, computer hardware design, mechanics and energy transfer, signal processing and digital process control. 
-            </p>
-          </blockquote>
+						<div class="col s12 m8 right-side">
+							<h4 class="left-align" id="work"><i class="small material-icons">card_travel</i> Work Experience</h4>
+							<div class="block">
 
-          <br>
+								<h5>Software Engineer</h5>
+								<p class="helping-text"><a href="https://www.xing.com/"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> XING SE</a> <i class="material-icons light-blue-text text-darken-3 tiny">today</i> May 2018 - Present</p>
+								<p>Currently working as a software engineer in Germany.</p>
+							</div>
 
-          <!-- <ul class="collapsible"> -->
-          <ul class="collapsible popout" data-collapsible="accordian">
-            <!--<li class="active">-->
-            <li>
-              <div class="collapsible-header">
-                <i class="mdi-social-school blue-text text-darken-2">
-                </i>
-                  Academic
-              </div>
-              <div class="collapsible-body">
-                <p>
-                  <i class="mdi-action-cached tiny icon-demo blue-text text-darken-2">
-                  </i>
-                    MASc, Machine Learning & Artificial Intelligence
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo blue-text text-darken-2">
-                  </i>
-                  <i>
-                    University of Guelph, Guelph ON
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo blue-text text-darken-2">
-                  </i>
-                    May 2017 - Present
+							<div class="block">
 
-                  <br>
-                  <br>
+								<h5>Software Engineer</h5>
+                <p class="helping-text"><a href="https://www.gympass.com/"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> Gympass</a> <i class="material-icons light-blue-text text-darken-3 tiny">today</i> February 2017 - April 2018</p>
+								<p>Worked as a full-time developer mainly focused on Ruby on Rails, jQuery, MySQL.</p>
+							</div>
+							<div class="block">
 
-                  <i class="mdi-action-done-all tiny icon-demo blue-text text-darken-2">
-                  </i>
-                    BEng, Engineering Systems & Computing
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo blue-text text-darken-2">
-                  </i>
-                  <i>
-                    University of Guelph, Guelph ON
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo blue-text text-darken-2">
-                  </i>
-                    Sept 2012 - Apr 2017
+								<h5>Ruby on Rails Developer</h5>
+								<p class="helping-text"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> Quero Educação <i class="material-icons light-blue-text text-darken-3 tiny">today</i> July 2014 - July 2015</p>
+								<p>During my time at the company, I worked as a full-stack developer within a team using SCRUM methodology of software development, mainly focused on Ruby on Rails but performed many tasks featuring JavaScript in the company's main product: <a href="https://querobolsa.com.br/">QueroBolsa</a>.</p>
+							</div>
+							<div class="block">
 
-                </p>
-              </div>
-            </li>
-          
-            <li>
-              <div class="collapsible-header">
-                <i class="mdi-communication-business orange-text text-darken-2">
-                </i>
-                  Experience
-              </div>
-              <div class="collapsible-body">
-                <p>
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Machine Learning Engineer (Computer Vision)
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    <a href="https://www.tesla.com/">Tesla, San Francisco CA</a>
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    May 2018 - Present
-                  <br>
-                    Working on confidential vision systems and experiences for Tesla Model vehicles.
-                  <br>
-                  <br>
+								<h5>Java Developer</h5>
+								<p class="helping-text"><a href="https://www.fiduciagad.de/"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> FIDUCIA IT AG</a> <i class="material-icons light-blue-text text-darken-3 tiny">today</i> May 2013 - November 2013</p>
+								<p>One of the 5 members of an international team which had the focus on innovation. As a Java Developer, the main goal of the project was to design the prototype as a proof of concept that our innovative ideas: to integrate Social Media with softwares of banks in Germany were there to help. Much of our progress was documented <a href="https://www.facebook.com/FiduciaPBoX/">here</a>.</p>
+							</div>
 
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Graduate Research Assistant
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    University of Guelph, Guelph ON
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    May 2017 - Present
-                  <br>
-                    Research focused on novel deep learning algorithms and high performance computing (HPC) for large-scale machine learning.
-                  <br>
-                  <br>
+							<div class="block">
 
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Machine Learning Engineer
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    <a href="http://www.scotiabank.com/gls/en/index.html#about">Scotiabank, Toronto ON</a>
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    Sept 2016 - Dec 2016
-                  <br>
-                    Proposed and designed an <a href="http://markets.businessinsider.com/news/stocks/r-scotiabank-seeks-advantage-over-rivals-with-new-fintech-space-2017-1-1001699753">AI-Powered Financial Chatbot</a> to generate significant business value for Scotiabank's enterprise wide customer intelligence. I spent a lot of my time preparing conversational dialogue datasets as training data and contributed to the generative conversational model. <i>Used: TensorFlow, Anaconda, NLP, Django, Docker, AWS</i>
+								<h5>Storage & Backup Intern</h5>
+								<p class="helping-text"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> MARS Inc. <i class="material-icons light-blue-text text-darken-3 tiny">today</i> February 2012 - April 2013</p>
+								<p>Part of the infra-structure team, specifically into the Storage & Backup area, the main responsibility was to present metrics and updated data between peers from the USA, Russia, China and Brazil.</p>
+							</div>
+							<h4 class="left-align" id="education"><i class="small material-icons">school</i> Education</h4>
+							<div class="block">
 
-                  <br>
-                  <br>
+								<h5>Bachelor of Computer Science</h5>
+								<p class="helping-text"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> <a href="http://pace.edu/">Pace University</a> <i class="material-icons light-blue-text text-darken-3 tiny">today</i> August 2015 - May 2016</p> <p class="right-align"><strong>GPA:</strong> 3.85/4.00</p>
+								<p>Through a government sponsored program called <a href="http://www.iie.org/programs/brazil-scientific-mobility">Brazil Scientific Mobility Program</a>, I had the opportunity to study a whole academic year in the USA with a full scholarship. After completion of the academic year, the goal is to return to Brazil to complete my degree and transfer the knowledge along my experiences acquired in the country.</p>
+							</div>
+							<div class="block">
 
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Hardware and Systems Developer
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    <a href="http://www.onsemi.com/PowerSolutions/home.do">ON Semiconductor, Waterloo ON</a>
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    May 2016 - Aug 2016
-                  <br>
-                    Worked independently to design a power and clock calibration library for <a href="http://www.onsemi.com/PowerSolutions/product.do?id=RSL10">RSL10</a>, ON Semiconductor's latest ultra-low power multi-protocol Bluetooth 5.0 SoC. I also performed hardware and firmware verification for the chip's BLE 5.0 Security Stack:GAP/GATT pairing and bonding process. <i>Used: C, ARM Assembly, Eclipse, J-Link, nRF Studio</i>
+								<h5>Bachelor of Computer Science</h5>
+								<p class="helping-text"><i class="material-icons light-blue-text text-darken-3 tiny">place</i> <a href="http://unifesp.br/">Federal University of São Paulo</a> <i class="material-icons light-blue-text text-darken-3 tiny">today</i> February 2013 - December 2016</p>
+								<p> Currently, studying at the Universidade Federal de São Paulo (UNIFESP), in the Institute of Science And Technology.</p>
+							</div>
 
-                  <br>
-                  <br>
+							<h4 class="left-align"><i class="material-icons small">explore</i> Extra</h4>
+							<div class="block">
+								<div class="row">
+									<div class="col m6 s12">
+										<div class="card">
+											<div class="card-image waves-effect waves-block waves-light">
+												<img class="activator" src="assets/images/extra1.jpg" alt="work">
+											</div>
+											<div class="card-content">
+												<span class="card-title activator grey-text darken-4">Music <i class="material-icons right small">more_vert</i></span>
+											</div>
+											<div class="card-reveal">
+												<span class="card-title grey-text darken-4">Taiko <i class="material-icons right small">close</i></span>
+												<p>Percussionist and instructor of taiko(Japanese drums) group "Hibiki Wadaiko".</p>
+												<p>Voluntary member of the Staff from many events about the Japanese culture and from the 6º Edition of the Brazilian Taiko Championship - 2009.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col m6 s12">
+										<div class="card">
+											<div class="card-image waves-effect waves-block waves-light">
+												<img class="activator" src="assets/images/extra2.jpg" alt="work">
+											</div>
+											<div class="card-content">
+												<span class="card-title activator grey-text darken-4">Sports <i class="material-icons right small">more_vert</i></span>
+											</div>
+											<div class="card-reveal">
+												<span class="card-title grey-text darken-4">Tennis <i class="material-icons right small">close</i></span>
+												<p><a href="#"></a></p>
+												<p>While member of the "Camden Central High School" Tennis Team during Junior year, was awarded with "Sportmanship Award" and also "3.5 or Higher GPA while member of the Tennis Team” award.</p>
+											</div>
+										</div>
+									</div>
 
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Software Engineer (Video)
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    <a href="http://www.evertz.com/">Evertz Microsystems, Burlington ON</a>
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    Jan 2015 - Aug 2015
-                  <br>
-                    Developed a Bit Estimator algorithm with 91% accuracy, as well as an Artifact Reducing Filter for the HEVC encoder software library for <a href="http://www.evertz.com/products/3480TXE">Evertz Microsystems' 3480TXE Platform</a>. I also, researched and implemented a novel Capped Variable Bitrate (CVBR) algorithm for Real-Time H.264 video encoders and transcoders. <i>Used: Python, C, Visual Studio, SVN.</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                  <br>
-                  <br>
 
-                  <i class="mdi-action-label tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <b>
-                    Mobile Application Developer (Android)
-                  </b>
-                  <br>
-                  <i class="mdi-communication-location-on tiny icon-demo orange-text text-darken-2">
-                  </i>
-                  <i>
-                    <a href="http://www.jamdeo.com/">Jamdeo (Flextronics International and HiSense Group), Oakville ON</a>
-                  </i>
-                  <br>
-                  <i class="mdi-editor-insert-invitation tiny icon-demo orange-text text-darken-2">
-                  </i>
-                    May 2013 - Aug 2013
-                  <br>
-                    Collaborated with the Architecture and Technology team to implement security libraries for secure D2D communication in the core of an Android IoT application. Also, explored Smart Home Automation APIs from Nest, Honeywell and Apple to be used for the app. <i>Used: C, Android NDK, GDB</i>
-                </p>
-              </div>
-            </li>
+		<footer class="page-footer z-depth-6 light-blue darken-1 outside-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Victor Presumido</h5>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Links</h5>
+						<ul>
+							<li><a class="white-text text-lighten-3" href="#about-me">About me</a></li>
+							<li><a class="white-text text-lighten-3" href="#contact-me">Contact me</a></li>
+							<li><a class="white-text text-lighten-3" href="#work">Work Experience</a></li>
+							<li><a class="white-text text-lighten-3" href="#education">Education</a></li>
+							<li><a class="white-text text-lighten-3" href="/blog">Blog</a></li>
+							<li><a class="white-text text-lighten-3" href="/resume.pdf">Resume</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright z-depth-6 light-blue darken-4">
+				<div class="container">
+					<center>© 2016 Made with <img id="love" src="assets/images/love.png"> by Victor Presumido</center>
+				</div>
+			</div>
+		</footer>
 
-            <li>           
-              <div class="collapsible-header">
-                <i class="mdi-action-store purple-text text-darken-2">
-                </i>
-                  Projects
-              </div>
-              <div class="collapsible-body">
-                <p>
-                  <i class="mdi-action-label tiny icon-demo purple-text text-darken-2">
-                  </i>
-                  <a href="https://github.com/vithursant/MagnetLoss-PyTorch" target="_blank">
-                    Magnet Loss for Metric Learning
-                  </a>
-                  <br>
-                  PyTorch implementation of the <a href="https://research.fb.com/wp-content/uploads/2016/05/metric-learning-with-adaptive-density-discrimination.pdf?">Metric Learning for Adaptive Density Discrimination</a> paper from Facebook AI Research.
-                  <br>
-                  <br>
-
-                  <i class="mdi-action-label tiny icon-demo purple-text text-darken-2">
-                    </i>
-                    <a href="https://github.com/vithursant/VAE-Gumbel-Softmax" target="_blank">
-                      VAE with Gumbel-Softmax
-                    </a>
-                    <br>
-                    TensorFlow implementation of the <a href="https://arxiv.org/pdf/1611.00712.pdf">Concrete Distribution:
-                      A Continuous Relaxation of Discrete Random Variables</a> paper from Google DeepMind
-                  <br>
-                  <br>
-
-                  <i class="mdi-action-label tiny icon-demo purple-text text-darken-2">
-                  </i>
-                  <a href="https://github.com/vithursant/terraform-aws-spotgpu" target="_blank">
-                    Terraform + AWS
-                  </a>
-                  <br>
-                  Built a tool to automate provisioning of AWS Spot Instances for Deep Learning workloads using Terraform.
-                </p>
-              </div>
-            </li>
-          
-            <!--<li class="active">-->
-            <li>
-              <div class="collapsible-header">
-                <i class="mdi-av-web red-text text-accent-3">
-                </i>
-                  Skills
-              </div>
-           
-              <div class="collapsible-body">
-                <div style="padding: 1em">
-                  Machine Learning
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 80%;">
-                    </div>
-                  </div>
-                  Deep Learning
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 80%;">
-                    </div>
-                  </div>
-                  Python
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 88%;">
-                    </div>
-                  </div>
-                  TensorFlow
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 78%;">
-                    </div>
-                  </div>
-                  C
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 82%;">
-                    </div>
-                  </div>
-                  Embedded Systems
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 84%;">
-                    </div>
-                  </div>
-                  DevOps
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 76%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!--  HERE IF YOU WANT SOME IMAGE GALLERY
-
-    <div class="container portfolio">
-    <h5>
-    portfólio
-    </h5>
-    <h6>
-    Últimos Projetos
-    </h6>
-    <div class="divider">
-    </div>
-    <br>
-    <div class="row">
-    <img class="materialboxed" src="01.jpg">
-    <img class="materialboxed" src="02.jpg">
-    <img class="materialboxed" src="03.jpg">
-    <img class="materialboxed" src="04.jpg">
-    <img class="materialboxed" src="05.jpg">
-    <img class="materialboxed" src="06.jpg">
-    </div>
-    </div>
-    -->
-
-    <br>
-
-    <!-- <div class="container contact" align="center">
-      <h5>
-        CONTACT
-      </h5>
-
-      <div class="divider">
-      </div>
-
-      <br>
-    </div>
-
-    CONTACT AREA
-    <div class="row center">
-      <div class="col s12 m3 l3">
-        <p> </p>
-      </div>
-
-      <div class="col s12 m6 l6 center">
-        <div class="card white">
-          <div class="card-content grey-text text-darken-4">
-            <i class="mdi-action-home"></i>
-            Address
-            <br>
-            <p>
-              50 Stone Rd. East
-              <br>
-              Guelph, ON Canada • N1G 2W1
-            </p>
-            
-            <br>
-
-            <i class="mdi-communication-email"></i>
-            E-mail
-            <br>
-            <p>
-              vithursan"DOT"thangarasa"AT"gmail.com
-            </p>
-
-            <h6>
-            <i class="mdi-hardware-phone-android">
-            </i>
-            Phone Number
-          </h6>
-          <p>
-            111-222-1234
-
-            <br>
-
-            <i class="mdi-action-open-in-browser">
-            </i>
-            Personal Website
-            <br>
-            <p>
-              <a href="http://www.vithursant.com" target="_blank">
-                vithursant.com
-              </a>
-            </p> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m3 l3">
-        <p> </p>
-      </div>
-
-    </div> -->
-    
-    <br>
-    <br>
-
-    <footer>
-      <div class="footer-copyright" align="center">
-        <div class="container">
-          © 2017 Vithursan Thangarasa powered by <a href="https://material.io/">Google Material Design</a>
-          <!--
-          <a class="grey-text text-lighten-4 right" href="#!">
-            Link
-          </a>
-          -->
-        </div>
-      </div>
-    </footer>
-
-    <br>
-    <br>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
-    </script>
-    <script type="text/javascript" src="js/title.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js">
-    </script>
-    <script type="text/javascript">
-      //JS de customização
-      
-      $(document).ready(function(){
-        $(".button-collapse").sideNav();
-        $('.parallax').parallax();
-      }
-                       );
-    </script>
-    
-  </body>
+		<!--  Scripts-->
+		<script src="assets/js/jquery-2.1.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+		<script src="assets/js/slider.js"></script>
+		<script src="assets/js/hammer.min.js"></script>
+		<script src="assets/js/init.js"></script>
+	</body>
 </html>
