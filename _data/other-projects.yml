@@ -10,7 +10,7 @@
     - thing: YouTube API
 
 - name: Halcyon Theme
-  url: https://embedding.ai/halcyon-site/
+  url: https://brittanychiang.com/halcyon-site/
   code: https://github.com/bchiang7/halcyon-site
   description: A minimal, dark theme for Sublime Text, Atom, VS Code, and more published to <a class="underline-link" href="https://packagecontrol.io/packages/Halcyon%20Theme">Package Control</a>, <a class="underline-link" href="https://atom.io/themes/halcyon-syntax">Atom Package Manager</a>, <a class="underline-link" href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode">Visual Studio Marketplace</a>, and <a class="underline-link" href="https://www.npmjs.com/package/hyper-halcyon-theme">NPM</a>.
   used:
@@ -34,7 +34,7 @@
     - thing: JavaScript
 
 - name: myNEU Redesign
-  url: http://embedding.ai/Redesign-myNEU/
+  url: http://brittanychiang.com/Redesign-myNEU/
   code: https://github.com/bchiang7/Redesign-myNEU
   description: myNEU student portal web prototype for my information science senior project. I conducted a study that aimed to answer the question of how myNEU can be improved to provide students at Northeastern with a better user experience. Informed by usability metrics gathered from user tests, I redesigned and developed a web prototype of myNEU.
   used:
@@ -80,7 +80,7 @@
 #   - thing: Cordova
 
 - name: Personal Website V2
-  url: http://embedding.ai/v2
+  url: http://brittanychiang.com/v2
   code: https://github.com/bchiang7/v2
   description: Second iteration of my personal website. Designed and developed with a conscious effort to avoid using any superfluous frameworks like Bootstrap.
   used:
@@ -91,7 +91,7 @@
   - thing: Github Pages
 
 - name: React Resume
-  url: http://embedding.ai/react-profile/
+  url: http://brittanychiang.com/react-profile/
   code: https://github.com/bchiang7/react-profile/
   description: An online version of my 2016 resume I made for fun. I was interested in learning React.js, so I found this <a class="underline-link" href="https://medium.com/learning-new-stuff/building-your-first-react-js-app-d53b0c98dc#.1439cdewq">simple tutorial</a> and it kind of spun into this weekend project. I probably didn't need to use React at all, but hey, at least I learned a few things!
   used:
@@ -124,7 +124,7 @@
     - thing: Bootstrap
 
 - name: Fontipsums
-  url: http://embedding.ai/fontipsums
+  url: http://brittanychiang.com/fontipsums
   code: https://github.com/bchiang7/fontipsums
   description: As someone who has an eye for typography, I wanted a way to visually see different font combinations together. I whipped up this simple website to display some of my favorite pairings combined with some fun lorem ipsum variations I found on the web.
   used:
@@ -132,7 +132,7 @@
     - thing: SCSS
 
 - name: Personal Website V1
-  url: http://embedding.ai/v1
+  url: http://brittanychiang.com/v1
   code: https://github.com/bchiang7/website_2015/
   description: My first portfolio website I designed and built in 2014. I learned quite a bit about HTML, CSS, and SEO. Since then, I think my web development and design skills have improved immensely.
   used:
