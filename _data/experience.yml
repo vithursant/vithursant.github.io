@@ -1,44 +1,29 @@
-- company: Upstatement
-  url: https://www.upstatement.com/
+- company: Tesla
+  url: https://www.tesla.com/
   time: May 2018 - Present
-  position: Engineer
+  position: Machine Learning Engineer
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2018
-  position: Studio Developer
+- company: University of Guelph
+  url: https://www.uoguelph.ca/engineering/grad/masc/
+  time: Sept 2017 - May 2018
+  position: Graduate Teaching Assistant
 
-- company: Apple Music
-  url: https://www.apple.com/music/
-  time: July - Dec 2017
-  position: UI Engineer Co-op
+- company: Scotiabank - Artificial Intelligence and Machine Learning Group
+  url: https://digitalfactory.scotiabank.com/
+  time: Sept 2016 - Dec 2016
+  position: Deep Learning Data Scientist
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2017
-  position: Studio Developer
+- company: ON Semiconductor - Medican and Wireless Products Division
+  url: http://www.onsemi.com/
+  time: May 2016 - Aug 2016
+  position: Hardware and Systems Developer
 
-- company: Starry
-  url: https://starry.com/
-  time: July - Dec 2016
-  position: Software Engineer Co-op
+- company: Evertz Microsystems Ltd.
+  url: https://evertz.com/
+  time: Jan 2015 - Aug 2015
+  position: Software Engineer, Video Compression
 
-- company: Northeastern University
+- company: Jamdeo (Flextronic & HiSense Joint Venture)
   url: http://www.ccis.northeastern.edu/
-  time: Jan - May 2016
-  position: HCI Teaching Assistant
-
-- company: NU Women in Tech
-  url: http://nuwit.ccs.neu.edu/
-  time: Jan 2016 - May 2017
-  position: President & Web Chair
-
-- company: MullenLowe U.S.
-  url: https://us.mullenlowe.com/
-  time: July - Dec 2015
-  position: Creative Technologist Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Mar - May 2015
-  position: HCI Research Assistant
+  time: May 2014 - Aug 2014
+  position: Mobile Application Developer, Android
