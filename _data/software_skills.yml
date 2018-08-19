@@ -20,6 +20,7 @@ tools:
 
 design:
   - item: AWS
+  - item: Kubernetes
   - item: Terraform
   - item: CloudFormation
   - item: Docker

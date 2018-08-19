@@ -6,15 +6,15 @@
       <div class="skillz__category">
         <div class="skillz__category__label">Languages</div>
         <ul>
-          {% for language in site.data.skills.languages %}
+          {% for language in site.data.software_skills.languages %}
           <li class="skillz__category__item">{{language.item}}</li>
           {% endfor %}
         </ul>
       </div>
       <div class="skillz__category">
-        <div class="skillz__category__label">Frameworks</div>
+        <div class="skillz__category__label">ML Frameworks</div>
         <ul>
-          {% for framework in site.data.skills.frameworks %}
+          {% for framework in site.data.software_skills.frameworks %}
           <li class="skillz__category__item">{{framework.item}}</li>
           {% endfor %}
         </ul>
@@ -22,7 +22,7 @@
       <div class="skillz__category">
         <div class="skillz__category__label">Models</div>
         <ul>
-          {% for tool in site.data.skills.tools %}
+          {% for tool in site.data.software_skills.tools %}
           <li class="skillz__category__item">{{tool.item}}</li>
           {% endfor %}
         </ul>
@@ -30,7 +30,7 @@
       <div class="skillz__category">
         <div class="skillz__category__label">DevOps Tools</div>
         <ul>
-          {% for thing in site.data.skills.design %}
+          {% for thing in site.data.software_skills.design %}
           <li class="skillz__category__item">{{thing.item}}</li>
           {% endfor %}
         </ul>
