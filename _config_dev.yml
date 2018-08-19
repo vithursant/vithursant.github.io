@@ -1,7 +1,7 @@
 # Site settings
 name: Vithursan Thangarasa
 title: Vithursan Thangarasa | Machine Learning Researcher
-description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
+description: Design-minded engineer focused on embedding artificial intelligence into applications that can transform our world in ways many of us can barely imagine
 url: https://embedding.ai/
 baseurl: ""
 email: vithursan.thangarasa@gmail.com
@@ -14,7 +14,7 @@ social:
   - title: twitter
     url: https://twitter.com/vthangarasa
   - title: instagram
-    url: https://instagram.com/vithursant19
+    url: https://instagram.com/vithursan19
   - title: github
     url: https://github.com/vithursant
   - title: linkedin
@@ -41,3 +41,4 @@ keep_files:
 plugins_dir:
   - jekyll-minifier
   - jekyll-sitemap
+
