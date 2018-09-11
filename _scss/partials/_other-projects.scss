@@ -1,6 +1,5 @@
 .other-projects {
   .project {
-    max-width: 600px;
     margin-bottom: 30px;
     
     @include tablet {
@@ -14,7 +13,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       @include mobile {
-        display: flex;
+        display: block;
       }
     }
     p {
