@@ -1,6 +1,6 @@
 - name: Self-Paced Learning with Adaptive Deep Visual Embeddings
   author: Vithursan Thangarasa and Graham W. Taylor
-  conf: Accepted in the British Machine Vision Conference (BMVC) 2018
+  conf: British Machine Vision Conference (BMVC) 2018
   url: http://bmvc2018.org/contents/papers/1033.pdf
   code: https://github.com/vithursant/SPL-ADVisE
   description: We introduce Self-Paced Learning with Adaptive Deep Visual Embeddings (SPL-ADVisE), 
