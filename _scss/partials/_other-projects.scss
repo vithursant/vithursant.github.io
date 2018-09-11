@@ -1,8 +1,6 @@
 .other-projects {
   .project {
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
     @include tablet {
       width: 100%;
       display: block;
