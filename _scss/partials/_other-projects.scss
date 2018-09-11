@@ -1,11 +1,15 @@
 .other-projects {
   .project {
     margin-bottom: 30px;
-    
+    display: flex;
+    justify-content: space-between;
     @include tablet {
       width: 100%;
       display: block;
       margin-bottom: 15px;
+    }
+    @include mobile {
+      display: block;
     }
     &__name {
       margin-bottom: 0px;
