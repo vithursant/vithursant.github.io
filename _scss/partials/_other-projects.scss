@@ -11,9 +11,10 @@
     &__name {
       margin-bottom: 0px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       @include mobile {
-        display: block;
+        display: flex;
       }
     }
     p {
