@@ -1,11 +1,13 @@
-# Personal Website V3
+# Jordi Pont-Tuset's site
 
-## Dependencies
+This site is based on the **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** theme, a two-column responsive Jekyll theme perfect for powering your GitHub hosted blog.
 
-- [Gulp](https://gulpjs.com/)
 
-## Getting Started
+## License
 
-1.  `gem install jekyll sass bundler jekyll-minifier jekyll-sitemap`
-1.  `npm install`
-1.  `npm start`
+Feel free to adapt this theme to your site without linking back to me or including a disclaimer, although letting me know would be nice. ;) 
+
+## To run it locally
+```
+jekyll serve --watch --port 5000
+```
