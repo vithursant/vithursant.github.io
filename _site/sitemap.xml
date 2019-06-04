@@ -35,4 +35,12 @@
     
 
     
+    <url>
+        <loc>http://localhost:5000/gradient-episdoic-memory/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:5000/continual-learning-overview/</loc>
+    </url>
+    
 </urlset>

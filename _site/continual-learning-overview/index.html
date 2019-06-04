@@ -1,0 +1,342 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Vithursan Thangarasa's site  &#8211; Continual Lifelong Learning with Deep Neural Networks </title>
+<meta name="description" content="Neural networks that learn sequentially in a lifelong manner without catastrophic forgetting.">
+<meta name="keywords" content="">
+<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content=
+			
+				
+						"http://localhost:5000/images/"
+				
+			
+		>
+	
+	<meta name="twitter:title" content="Continual Lifelong Learning with Deep Neural Networks">
+	<meta name="twitter:description" content="Neural networks that learn sequentially in a lifelong manner without catastrophic forgetting.">
+	<meta name="twitter:creator" content="@vithursant19">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Continual Lifelong Learning with Deep Neural Networks">
+<meta property="og:description" content="Neural networks that learn sequentially in a lifelong manner without catastrophic forgetting.">
+<meta property="og:url" content="http://localhost:5000/continual-learning-overview/">
+<meta property="og:site_name" content="Vithursan Thangarasa's site">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:5000/continual-learning-overview/">
+<link href="http://localhost:5000/feed.xml" type="application/atom+xml" rel="alternate" title="Vithursan Thangarasa's site Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:5000/assets/css/main.min.css">
+<link rel="stylesheet" href="http://localhost:5000/assets/academicons.css" />
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:5000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:5000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:5000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="shortcut icon" href="http://localhost:5000/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:5000/favicon.png">
+
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="192x192" href="http://localhost:5000/images/apple-icon-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:5000">Vithursan Thangarasa's site</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				<li><a href="http://localhost:5000/cv/" >Curriculum Vitae</a></li>
+		        
+				<li><a href="http://localhost:5000/publications/" >Publications</a></li>
+		        
+				<li><a href="http://localhost:5000/code/" >Code</a></li>
+		        
+				<li><a href="http://localhost:5000/blog/" >Blog</a></li>
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+	<img src="http://localhost:5000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
+
+<h3>Vithursan Thangarasa</h3>
+<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://scholar.google.es/citations?user=UUKxm4gAAAAJ" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
+
+<a href="http://linkedin.com/in/vithursant" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/vithursant" class="author-social" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+
+
+
+
+
+
+<a href="mailto:vithursan.thangarasa@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> E-Mail</a>
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:5000/continual-learning-overview/" rel="bookmark" title="Continual Lifelong Learning with Deep Neural Networks">Continual Lifelong Learning with Deep Neural Networks</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Continual machine learning aims to design and develop computational sytems and
+algorithms that learn as humans do. For example, as humans we are usually good
+at retaining the information learned in the past, abstracting shareable
+knowledge from them, and using the knowledge to help future learning and problem
+solving. The rationale is that when faced with a new situation, we humans use
+our previous experiences and knowledge to help deal with and learn from the new
+situation. Our biological neural network is very good at learning and
+accumulating knowledge continuously in a lifelong manner. I argue that it is
+essential to incorporate this capability into an artificial intelligence (AI)
+system to make it versatile, holistic and truly “intelligent”.</p>
+
+<p><br /> <b>Single-Task Learning</b> <br /> In traditional supervised ML setups,
+we train deep neural network (DNN) models independently on datasets consisting
+of the inputs and labels, <script type="math/tex">\{\mathcal{X}_n, \mathcal{Y}_n\}</script>, which I
+enumerate as tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script> is the maximum number tasks the
+model is expected to learn from. This is the most commonly used ML paradigm in
+practice. However, this leads to huge computational loads and scalability issues
+because we need aggregate the old and new data each time a new task needs to be
+learned. This is because knowledge is not retained between tasks (ie. knowledge
+is not cumulative, and the model cannot learn by leveraging past knowledge).
+Training such models in this setup requires a extremely large number of training
+examples to allow the model to generalize to all possible situations in
+real-world dynamic environments. I’m going to refer to this as <i>Machine Learning
+(ML) 1.0</i>.</p>
+
+<p><br /> <b>Continual Learning</b> <br /> In continual learning, the DNN has
+learns these tasks <script type="math/tex">T_{1:nmax}</script> in a sequential manner, and when faced with
+the <script type="math/tex">n^{th}</script> taskm it uses the relevant knowledge gained in the past <script type="math/tex">n-1</script>
+tasks to help learning for the <script type="math/tex">n^{th}</script> task. This suggests that a DNN should
+generate some prior knowledge from the past observed tasks to help future task
+learning without even observing any information from future task <script type="math/tex">T_{n+1}</script>.
+Ideally, in the continual learning setup we aim for <script type="math/tex">nmax = \infty</script>.  As we
+can see, this is different from the traditional ML training setup because the
+prior knowledge may be generated from the <script type="math/tex">n-1</script> tasks with or without
+considering the <script type="math/tex">n^{th}</script> task’s data. That way, the learning becomes truly
+lifelong and autonomous. It is also important to note that we are not jointly
+optimizing all new and past tasks, but only the task we are currently training
+on. Now, I’ll refer to this as <i>ML 2.0</i>.</p>
+
+<p><br /> <b>Example: Perception for Autonomous Vehicles</b> <br /> Data collected
+through driving can often be huge given that the output of the various sensors
+like cameras, lidar and radar as well as internal signals from CAN bus and other
+measurement units can easily be of the order of hundreds of megabytes per
+second. The observations are also not equally informative.</p>
+
+<p><br /> It is difficult to come up with either a one-time dataset or modeling
+that can cover all possible driving situations that an autonomous vehicle may
+encounter. Driving rules, traffic behavior and weather conditions change from
+one place to another and over time. So, it will be necessary to continuously
+collect such new instances as they are encountered in order for the existing
+systems to adapt accordingly. Thus, there is a need for the perception modules
+to learn continuously and reliably from new data in a scalable manner but
+without compromising on the knowledge obtained from previous training.</p>
+
+<p><br /> <b>Catastrophic Forgetting at a Glance</b> <br /> Continual learning
+sounds awesome but if we machine learning researchers ask ourselves why hasn’t
+there been much success with this learning paradigm, it is due to a well-known
+problem in DNNs.</p>
+
+<p><br /> Catastrophic forgetting poses a grand challenge for DNNs, something that
+was discovered a long time ago in the 90’s [1, 2]. In artificial neural networks,
+everytime new information is learned, it forgets a little of what it had already
+been trained on before. Neural networks store information by setting the values
+of weights, which are the strengths of the synaptic connections between neurons
+(see diagram below). These weights are also analgous to the axons in our brain,
+the long tendrils that connect from one neuron to dendrites of another neuron,
+and meet at microscopic gaps called synapses. Therefore, the value of the weight
+between two neurons in an artificial neural network is roughly like the number
+of axons between neurons in the biological neural network. When we train neural
+networks, we try to minimize the loss function using some gradient descent
+optimizer and backpropagation [3]. As a result, the weights slowly adjusted when we
+iteratively train the neural network on mini-batches of data until we achieve
+the desired output or best test performance.</p>
+
+<p><br /> Now, what happens when we take this same model and train on new data that
+we may have collected a few months later? The instant we start optimizing the
+model again with gradient descent and backpropagation, we start overwriting the
+pre-trained weights with new values that no longer represent the values we had
+for the previous dataset. The network starts “forgetting”.</p>
+
+<p><br /> <b>My Take on Continual Learning</b> <br />
+Although, current research in continual lifelong learning is still in its
+infancy, there have been several promising research directions within the
+machine learning (ML) community [4]. I strongly believe that within the next decade,
+DNNs will be capable of learning continually to perform multiple tasks without
+any human intervention. This will further enhance existing technologies that
+leverage AI such as perception for self-driving cars, fraud detection,
+recommender systems, climate monitoring, sentiment analysis, face recognition,
+and etc. It will also be crucial step towards achieving artificial general
+intelligence (AGI).</p>
+
+<p><br /><b>References</b><br />
+[1] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
+<br />
+[2] French, R. Catastrophic forgetting in connectionist networks. <i>Trends in Cognitive Sciences</i>, 3(4):128–135, 1999.
+<br />
+[3] Chauvin, Y. and Rumelhart, D. E. (eds.). <i>Backpropagation: Theory, Architectures, and Applications</i>, ISBN 0-8058- 1259-8, 1995.
+<br />
+[4] Parisi, G. I., Kemker R., Part J. L., Kanan C., and Wermter S. Continual Lifelong Learning with
+Neural Networks: A Review. <i>Corr</i>, abs/1802.07569, 2018.</p>
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="http://localhost:5000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
+
+<h3>Vithursan Thangarasa</h3>
+<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+<a href="http://scholar.google.es/citations?user=UUKxm4gAAAAJ" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
+
+<a href="http://linkedin.com/in/vithursant" class="author-social" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+
+
+<a href="http://github.com/vithursant" class="author-social" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+
+
+
+
+
+
+<a href="mailto:vithursan.thangarasa@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> E-Mail</a>
+
+
+        </div>
+        <p class="byline"><strong>Continual Lifelong Learning with Deep Neural Networks</strong> was published on <time datetime="2018-02-14T00:00:00+01:00">February 14, 2018</time> by <a href="http://localhost:5000" title="About Vithursan Thangarasa">Vithursan Thangarasa</a>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <span>&copy; 2019 Vithursan Thangarasa. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:5000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:5000/assets/js/scripts.min.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-104881273-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  processEscapes: true},
+  jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+  extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+  TeX: {
+  extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+  equationNumbers: {
+  autoNumber: "AMS"
+  }
+  }
+  });
+</script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'vithursant'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	        
+
+</body>
+</html>
