@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Continual Lifelong Learning with Deep Neural Networks
+title: Continual Lifelong Learning with Deep Neural Nets
 description: "Neural networks that learn sequentially in a lifelong manner without catastrophic forgetting."
 comments: true
 ---
