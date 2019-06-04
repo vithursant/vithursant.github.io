@@ -144,19 +144,19 @@ accumulating knowledge continuously in a lifelong manner. I argue that it is
 essential to incorporate this capability into an artificial intelligence (AI)
 system to make it versatile, holistic and truly “intelligent”.</p>
 
-<p><br /> <b>Single-Task Learning</b> <br /> In traditional supervised ML setups,
-we train deep neural network (DNN) models independently on datasets consisting
-of the inputs and labels, <script type="math/tex">\{\mathcal{X}_n, \mathcal{Y}_n\}</script>, which I
-enumerate as tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script> is the maximum number tasks
-the model is expected to learn from. This is the most commonly used ML paradigm
-in practice. However, this leads to huge computational loads and scalability
-issues because we need aggregate the old and new data each time a new task needs
-to be learned. This is because knowledge is not retained between tasks (ie.
-knowledge is not cumulative, and the model cannot learn by leveraging past
-knowledge). Training such models in this setup requires a extremely large number
-of training examples to allow the model to generalize to all possible situations
-in real-world dynamic environments. I’m going to refer to this as <i>Machine
-Learning (ML) 1.0</i>.</p>
+<p><br /> <b>Single-Task Learning</b> <br /> In traditional supervised machine
+learning (ML) setups, we train deep neural network (DNN) models independently on
+datasets consisting of the inputs and labels, <script type="math/tex">\{\mathcal{X}_n,
+\mathcal{Y}_n\}</script>, which I enumerate as tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script> is
+the maximum number tasks the model is expected to learn from. This is the most
+commonly used ML paradigm in practice. However, this leads to huge computational
+loads and scalability issues because we need aggregate the old and new data each
+time a new task needs to be learned. This is because knowledge is not retained
+between tasks (ie. knowledge is not cumulative, and the model cannot learn by
+leveraging past knowledge). Training such models in this setup requires a
+extremely large number of training examples to allow the model to generalize to
+all possible situations in real-world dynamic environments. I’m going to refer
+to this as <i>Machine Learning (ML) 1.0</i>.</p>
 
 <p><br /> <b>Example: Perception for Autonomous Vehicles</b> <br /> Data collected
 through driving can often be huge given that the output of the various sensors
@@ -179,7 +179,7 @@ compromising on the knowledge obtained from previous training.</p>
 
 <p><br /> <b>Continual Learning</b> <br /> In continual learning, a DNN learns the
 tasks <script type="math/tex">T_{1:nmax}</script> in a sequential manner, and when faced with the <script type="math/tex">n^{th}</script>
-taskm it uses the relevant knowledge gained in the past <script type="math/tex">n-1</script> tasks to help
+task it uses the relevant knowledge gained in the past <script type="math/tex">n-1</script> tasks to help
 learning for the <script type="math/tex">n^{th}</script> task. This suggests that a DNN should generate some
 prior knowledge from the past observed tasks to help future task learning
 without even observing any information from future task <script type="math/tex">T_{n+1}</script>. Ideally, in
