@@ -34,7 +34,7 @@ target="_blank">Jamdeo</a>.
 I am a design-minded engineer focused on embedding artificial intelligence into
 applications that can transform our world in ways many of us can barely imagine.
 As a machine learning researcher, I am interested in developing
-continual/lifelong Learning algorithms that allow deep neural networks to
+continual/lifelong learning algorithms that allow deep neural networks to
 continually evolve over time and dynamically adapt to unseen real-world
 environments, and improve as they operate. I enjoy bridging the gap between
 machine learning research and engineering — combining my technical knowledge
