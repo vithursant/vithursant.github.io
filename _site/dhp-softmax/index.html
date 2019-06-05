@@ -141,7 +141,8 @@ the “stability-plasticity” dilemma when retaining memories. Stability refers
 <p><br />
 <b>Synaptic consolidation</b> and <b>Complementary Learning Systems (CLS)</b> are two theories that have been proposed in the neuroscience literature to explain how  humans perform continual learning. The first theory proposes that a proportion of synapses in our neocortex becomes less <i>plastic</i> to retain information for a longer timescale. The second theory suggests that two learning systems are present in our brain: 1) the neocortex slowly learns generalizable structured knowledge 2) the hippocampus performs rapid learning of new experiences. The experiences stored in the the hippocampus are consolidated and replayed to the neocortex in the form of episodic memories to reinforce the synaptic connections.</p>
 
-<p><br />
+<p><br /> <b>Quick Summary</b> <br />
+<br />
 In our paper, we extend <i>differentiable plasticity</i> to a continual learning setting and develop a model that is able to adapt quickly to changing environments as well as consolidating past knowledge by dynapically adjusting the plasticity of synapses. In the softmax layer, we augment the traditional (slow) weights used to train DNNs with a set of plastic (fast) weights using <b>Differentiable Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an auto-associative memory that can rapidly bind deep representations of the data from the penultimate layer to the class labels. We call this new softmax layer as the <b>DHP-Softmax</b>. We also show the flexibility of our model by combining it with popular task-specific synaptic consolidation methods in the literature such as: elastic weight consolidation (EWC), synaptic intelligence (SI) and memory aware synapses (MAS). Our model is implemented using the PyTorch framework and trained on 
 a single Nvidia Titan V.</p>
 
@@ -187,7 +188,7 @@ Then, we apply the softmax function on <script type="math/tex">z</script> to obt
 <p><br /> <b>Hebbian Update Rule</b> <br /></p>
 
 <p><br />
-At the start of training the first task $T_{1}$, we initialize <script type="math/tex">\mathrm{Hebb}</script> to zero as follows:</p>
+At the start of training the first task $T_{1}$, we initialize <script type="math/tex">\mathrm{Hebb}</script> to zero:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initial_zero_hebb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s">'cuda'</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
@@ -225,10 +226,36 @@ At the start of training the first task $T_{1}$, we initialize <script type="mat
 <p><br />
 Following the existing work for overcoming
 catastrophic forgetting such as EWC, Online EWC, SI and
-MAS, we regularize the loss:</p>
+MAS, we regularize the loss, <script type="math/tex">\mathcal{L}(\theta)</script>, where <script type="math/tex">\Omega_{i,j}</script> is an importance measure for each slow weight <script type="math/tex">\theta_{i,j}</script> and determines how plastic the connections should be. Here, least plastic weights can retain memories for a longer period of time whereas, more plastic weights are considered less important.</p>
 
 <script type="math/tex; mode=display">\mathcal{L}(\theta) = \mathcal{L}^{n}(\theta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}</script>
 
+<p><br />
+where, <script type="math/tex">\theta_{i,j}^{n-1}</script> are the learned network parameters after training on the previous <script type="math/tex">n − 1</script> tasks and <script type="math/tex">\lambda</script> is a hyperparameter for the regularizer to control the amount of forgetting.</p>
+
+<p><br />
+We adapt these existing synaptic consolidation approaches to DHP-Softmax and only compute the <script type="math/tex">\Omega_{i,j}</script>
+on the slow weights of the network. The plastic part of our
+model can alleviate catastrophic forgetting of learned classes
+by optimizing the plasticity of the synaptic connections.</p>
+
+<p><br /> <b>Experiments: SplitMNIST Benchmark</b> <br />
+<br />
+A sequence of <script type="math/tex">T_{n=1:5}</script> tasks are generated
+by splitting the original MNIST training dataset into a sequence of 5 binary
+classification tasks: <script type="math/tex">T_1 = \{0/1\}</script>, <script type="math/tex">T_2 =
+\{2/3\}</script>, <script type="math/tex">T_3 = \{4/5\}</script>, <script type="math/tex">T_4 = \{6/7\}</script> and <script type="math/tex">T_5 = \{8/9\}</script>, making
+the output spaces disjoint between tasks. We trained a multi-headed MLP network 
+with two hidden layers of 256 ReLU nonlinearities each, and a cross-entropy loss. 
+We compute the cross-entropy loss, <script type="math/tex">\mathcal{L}(\theta)</script>, at the softmax output layer for the digits present in the current task, <script type="math/tex">T_n</script>. We train the network sequentially on all 5 tasks <script type="math/tex">T_{n=1:5}</script> with mini-batches of size 64 and optimized using plain SGD with a fixed learning rate of 0.01 for 10 epochs. More details on experimental setup and hyperparameter settings can be found in the Appendix section our paper.</p>
+
+<p><br />
+<script type="math/tex">\hspace{60pt}</script> <img src="/images/benchmark.svg" alt="Frame" height="400px" width="400px" /></p>
+
+<p><br />
+We observe that DHP Softmax provides a 4.7% improvement on test performance compared
+to a finetuned MLP network (refer to the graph above). Also, combining
+DHP Softmax with task-specific consolidation consistently improves performance across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
 
       <hr />
       <footer role="contentinfo">
