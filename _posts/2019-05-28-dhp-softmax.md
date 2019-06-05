@@ -153,6 +153,7 @@ March 2017.
 <br />
 [4] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
 
+<br />
 [5] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
 on Machine Learning (ICML)</i>, pp. 3556–3565, 2018.
 
