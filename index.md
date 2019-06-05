@@ -9,7 +9,7 @@ image:
 
 <i>“I do think it’s important to follow your dreams and do something which you
 are excited by. If you follow your heart and do what you like, you will always
-do much better. It doesn’t matter what your educational qualification is.</i> 
+do much better. It doesn’t matter what your educational qualification is."</i> 
 <a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">- Sundar Pichai</a>
 
 <br />
