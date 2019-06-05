@@ -43,4 +43,8 @@
         <loc>http://localhost:5000/continual-learning-overview/</loc>
     </url>
     
+    <url>
+        <loc>http://localhost:5000/learning-to-teach/</loc>
+    </url>
+    
 </urlset>
