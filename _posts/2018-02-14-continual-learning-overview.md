@@ -66,7 +66,7 @@ refer to this as <i>ML 2.0</i>.
 <br /> <b>Catastrophic Forgetting at a Glance</b> <br /> Continual learning
 sounds awesome but if we ask ourselves why hasn't there been much success with
 this learning paradigm, it is due to a well-known problem in DNNs called
-catastrophic forgetting or catastrophic interference [1, 2]. 
+catastrophic forgetting or catastrophic interference [2, 3]. 
 
 <br /> Catastrophic forgetting poses a grand challenge for DNNs, something that
 was discovered a long time ago in the 90's. In artificial neural networks,
@@ -79,7 +79,7 @@ and meet at microscopic gaps called synapses. Therefore, the value of the weight
 between two neurons in an artificial neural network is roughly like the number
 of axons between neurons in the biological neural network. When we train neural
 networks, we try to minimize the loss function using some gradient descent
-optimizer and backpropagation [3]. As a result, the weights are slowly adjusted when
+optimizer and backpropagation [1]. As a result, the weights are slowly adjusted when
 we train the neural network iteratively on mini-batches of data until we achieve
 the desired output or best test performance. 
 
@@ -104,11 +104,14 @@ towards achieving artificial general intelligence (AGI), a long standing
 challenge for many AI researchers.
 
 <br /><b>References</b><br/>
-[1] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
+[1] Chauvin, Y. and Rumelhart, D. E. (eds.). <i>Backpropagation: Theory, Architectures, and Applications</i>, ISBN 0-8058- 1259-8, 1995.
+
 <br />
 [2] French, R. Catastrophic forgetting in connectionist networks. <i>Trends in Cognitive Sciences</i>, 3(4):128–135, 1999.
+
 <br />
-[3] Chauvin, Y. and Rumelhart, D. E. (eds.). <i>Backpropagation: Theory, Architectures, and Applications</i>, ISBN 0-8058- 1259-8, 1995.
+[3] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
+
 <br/>
 [4] Parisi, G. I., Kemker R., Part J. L., Kanan C., and Wermter S. Continual Lifelong Learning with
 Neural Networks: A Review. <i>Corr</i>, abs/1802.07569, 2018.
