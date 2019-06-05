@@ -36,6 +36,10 @@
 
     
     <url>
+        <loc>http://localhost:5000/dhp-softmax/</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:5000/gradient-episdoic-memory/</loc>
     </url>
     
