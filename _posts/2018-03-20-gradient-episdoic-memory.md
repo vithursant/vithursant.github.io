@@ -8,8 +8,8 @@ comments: true
 On March 20, 2018, I gave a talk to the Machine Learning Research Group (MLRG)
 at the University of Guelph on continual learning, also called lifelong
 learning, which has been a hot research topic in recent years. Here, I reviewed
-a NIPS 2017 paper called <i>Gradient Episodic Memory for Continual Learning</i>
-by David-Lopez Paz and Marc'Aurelio Ranzato from Facebook AI Research (FAIR). 
+a NIPS 2017 paper called <i>Gradient Episodic Memory for Continual Learning</i> [1] 
+from Facebook AI Research (FAIR). 
 
 <br />
 More details coming soon...
