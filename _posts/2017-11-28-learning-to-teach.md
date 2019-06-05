@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teaching to Learn by Learning to Teach
+title: Learning to Teach Neural Networks
 description: "Overview of methods in the literature for teaching neural networks how to learn"
 comments: true
 ---
