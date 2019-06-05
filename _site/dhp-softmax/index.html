@@ -134,7 +134,7 @@
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       <p>Deep neural networks (DNNs) are known to be prone to “forgetting”, which has been
-coined in the literature as <i>catastrophic forgetting</i> or <i>catastrophic interference</i>.
+coined in the literature as <i>catastrophic forgetting</i> or <i>catastrophic interference</i> [2, 4].
 This limits the DNN’s ability to perform continual lifelong learning as they face
 the “stability-plasticity” dilemma when retaining memories. Stability refers to the preserving of existing knowledge while, plasticity refers to integrating new knowledge.</p>
 
@@ -143,7 +143,7 @@ the “stability-plasticity” dilemma when retaining memories. Stability refers
 
 <p><br /> <b>Quick Summary</b> <br />
 <br />
-In our paper, we extend <i>differentiable plasticity</i> to a continual learning setting and develop a model that is able to adapt quickly to changing environments as well as consolidating past knowledge by dynapically adjusting the plasticity of synapses. In the softmax layer, we augment the traditional (slow) weights used to train DNNs with a set of plastic (fast) weights using <b>Differentiable Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an auto-associative memory that can rapidly bind deep representations of the data from the penultimate layer to the class labels. We call this new softmax layer as the <b>DHP-Softmax</b>. We also show the flexibility of our model by combining it with popular task-specific synaptic consolidation methods in the literature such as: elastic weight consolidation (EWC), synaptic intelligence (SI) and memory aware synapses (MAS). Our model is implemented using the PyTorch framework and trained on 
+In our paper, we extend <i>differentiable plasticity</i> [4] to a continual learning setting and develop a model that is able to adapt quickly to changing environments as well as consolidating past knowledge by dynapically adjusting the plasticity of synapses. In the softmax layer, we augment the traditional (slow) weights used to train DNNs with a set of plastic (fast) weights using <b>Differentiable Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an auto-associative memory that can rapidly bind deep representations of the data from the penultimate layer to the class labels. We call this new softmax layer as the <b>DHP-Softmax</b>. We also show the flexibility of our model by combining it with popular task-specific synaptic consolidation methods in the literature such as: elastic weight consolidation (EWC) [3, 6], synaptic intelligence (SI) [7] and memory aware synapses (MAS) [1]. Our model is implemented using the PyTorch framework and trained on 
 a single Nvidia Titan V.</p>
 
 <p><br /> <b>Our Model</b> <br /></p>
@@ -256,6 +256,42 @@ We compute the cross-entropy loss, <script type="math/tex">\mathcal{L}(\theta)</
 We observe that DHP Softmax provides a 4.7% improvement on test performance compared
 to a finetuned MLP network (refer to the graph above). Also, combining
 DHP Softmax with task-specific consolidation consistently improves performance across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
+
+<p><br /><b>References</b><br /></p>
+
+<p><br />
+[1] Aljundi, R., Babiloni, F., Elhoseiny, M., Rohrbach, M., and
+Tuytelaars, T. Memory aware synapses: Learning what
+(not) to forget. In <i>The European Conference on Computer
+Vision (ECCV)</i>, September 2018.</p>
+
+<p><br />
+[2] French, R. Catastrophic forgetting in connectionist networks. <i>Trends in Cognitive Sciences</i>, 3(4):128–135, 1999.</p>
+
+<p><br />
+[3] Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho,
+T., Grabska-Barwinska, A., Hassabis, D., Clopath, C.,
+Kumaran, D., and Hadsell, R. Overcoming catastrophic
+forgetting in neural networks. <i>Proceedings of the National Academy of Sciences (PNAS)</i>, 114(13):3521–3526,
+March 2017.</p>
+
+<p><br />
+[4] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.</p>
+
+<p>[5] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
+on Machine Learning (ICML)</i>, pp. 3556–3565, 2018.</p>
+
+<p><br />
+[6] Schwarz, J., Czarnecki, W., Luketina, J., GrabskaBarwinska, A., Teh, Y. W., Pascanu, R., and Hadsell, R.
+Progress &amp; compress: A scalable framework for continual
+learning. In <i>Proceedings of the 35th International Conference on Machine Learning (ICML)</i>, pp. 4535–4544,
+2018.</p>
+
+<p><br />
+[7] Zenke, F., Poole, B., and Ganguli, S. Continual learning
+through synaptic intelligence. In <i>Proceedings of the 34th
+International Conference on Machine Learning (ICML)</i>,
+pp. 3987–3995, 2017.</p>
 
       <hr />
       <footer role="contentinfo">
