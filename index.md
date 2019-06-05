@@ -23,7 +23,7 @@ href="https://www.gwtaylor.ca/" target="_blank">Dr. Graham W. Taylor</a>.
 Previously, I worked at <a href="https://www.uber.com/us/en/uberai/"
 target="_blank">Uber AI Labs</a>, <a href="https://www.tesla.com/"
 target="_blank">Tesla</a>, <a href="https://digitalfactory.scotiabank.com/"
-target="_blank">Scotiabank's AI/ML Group</a>, <a
+target="_blank">Scotiabank's Artificial Intelligence & Machine Learning Group</a>, <a
 href="https://www.onsemi.com/PowerSolutions/home.do" target="_blank">ON
 Semiconductor</a>, <a href="https://evertz.com/" target="_blank">Evertz
 Microsystems</a> and <a
