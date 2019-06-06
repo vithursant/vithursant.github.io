@@ -6,7 +6,7 @@ comments: true
 ---
 
 On May 29, 2017, I gave a talk to the Machine Learning Research Group (MLRG) at
-the University of Guelph on adopting DevOps technologies to deep learniong work
+the University of Guelph on adopting DevOps technologies to deep learning work
 environments. Here, I reviewed the five pillars of DevOps and how we can combine
 TensorFlow with a number of different tools such as: AWS, MAAS, Docker,
 Kubernetes, Juju. 
