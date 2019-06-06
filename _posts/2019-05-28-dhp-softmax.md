@@ -15,7 +15,7 @@ knowledge while, plasticity refers to integrating new knowledge.
 
 <br /> <b>Synaptic consolidation</b> and <b>Complementary Learning Systems
 (CLS)</b> are two theories that have been proposed in the neuroscience
-literature to explain how  humans perform continual learning. The first theory
+literature to explain how humans perform continual learning. The first theory
 proposes that a proportion of synapses in our neocortex becomes less
 <i>plastic</i> to retain information for a longer timescale. The second theory
 suggests that two learning systems are present in our brain: 1) the neocortex
@@ -24,8 +24,13 @@ rapid learning of new experiences. The experiences stored in the the hippocampus
 are consolidated and replayed to the neocortex in the form of episodic memories
 to reinforce the synaptic connections. 
 
+One of the fundamental premises of neuroscience is <b>Hebbian learning</b> [3], which
+suggests that learning and memory in the biological neural networks are
+attributed to weight plasticity, that is, the modification of the strength of
+existing synapses according to variants of Hebb’s rule [7, 8].
+
 <br /> <b>Quick Summary</b> <br /> <br /> In our paper, we extend
-<i>differentiable plasticity</i> [4] to a continual learning setting and develop
+<i>differentiable plasticity</i> [6] to a continual learning setting and develop
 a model that is able to adapt quickly to changing environments as well as
 consolidating past knowledge by dynapically adjusting the plasticity of
 synapses. In the softmax layer, we augment the traditional (slow) weights used
@@ -35,8 +40,8 @@ auto-associative memory that can rapidly bind deep representations of the data
 from the penultimate layer to the class labels. We call this new softmax layer
 as the <b>DHP-Softmax</b>. We also show the flexibility of our model by
 combining it with popular task-specific synaptic consolidation methods in the
-literature such as: elastic weight consolidation (EWC) [3, 6], synaptic
-intelligence (SI) [7] and memory aware synapses (MAS) [1]. Our model is
+literature such as: elastic weight consolidation (EWC) [4, 9], synaptic
+intelligence (SI) [10] and memory aware synapses (MAS) [1]. Our model is
 implemented using the PyTorch framework and trained on a single Nvidia Titan V.
 
 <br /> <b>Our Model</b> <br />
@@ -188,27 +193,38 @@ Vision (ECCV)</i>, September 2018.
 [2] French, R. Catastrophic forgetting in connectionist networks. <i>Trends in Cognitive Sciences</i>, 3(4):128–135, 1999.
 
 <br />
-[3] Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho,
+[3] Hebb, D. O. <i>The organization of behavior; a neuropsychological theory</i>. Wiley, Oxford, England, 1949.
+
+<br />
+[4] Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho,
 T., Grabska-Barwinska, A., Hassabis, D., Clopath, C.,
 Kumaran, D., and Hadsell, R. Overcoming catastrophic
 forgetting in neural networks. <i>Proceedings of the National Academy of Sciences (PNAS)</i>, 114(13):3521–3526,
 March 2017.
 
 <br />
-[4] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
+[5] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.
 
 <br />
-[5] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
+[6] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
 on Machine Learning (ICML)</i>, pp. 3556–3565, 2018.
 
 <br />
-[6] Schwarz, J., Czarnecki, W., Luketina, J., GrabskaBarwinska, A., Teh, Y. W., Pascanu, R., and Hadsell, R.
+[7] Oja, E. Oja learning rule. Scholarpedia, 3(3):3612, 2008
+
+<br />
+[8] Paulsen, O. and Sejnowski, T. J. Natural patterns of activity
+and long-term synaptic plasticity. <i>Current Opinion in
+Neurobiology</i>, 10(2):172 – 180, 2000.
+
+<br />
+[9] Schwarz, J., Czarnecki, W., Luketina, J., GrabskaBarwinska, A., Teh, Y. W., Pascanu, R., and Hadsell, R.
 Progress & compress: A scalable framework for continual
 learning. In <i>Proceedings of the 35th International Conference on Machine Learning (ICML)</i>, pp. 4535–4544,
 2018.
 
 <br />
-[7] Zenke, F., Poole, B., and Ganguli, S. Continual learning
+[10] Zenke, F., Poole, B., and Ganguli, S. Continual learning
 through synaptic intelligence. In <i>Proceedings of the 34th
 International Conference on Machine Learning (ICML)</i>,
 pp. 3987–3995, 2017.
