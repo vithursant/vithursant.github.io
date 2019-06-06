@@ -24,6 +24,7 @@ rapid learning of new experiences. The experiences stored in the the hippocampus
 are consolidated and replayed to the neocortex in the form of episodic memories
 to reinforce the synaptic connections. 
 
+<br />
 One of the fundamental premises of neuroscience is <b>Hebbian learning</b> [3], which
 suggests that learning and memory in the biological neural networks are
 attributed to weight plasticity, that is, the modification of the strength of
