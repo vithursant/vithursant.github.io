@@ -63,10 +63,10 @@ nn.init.kaiming_uniform_(self.w, a=math.sqrt(5))
 
 ~~~
 # The alpha scaling coefficients of the plastic connections.
-self.alpha = torch.nn.Parameter((0.01 * torch.rand(self.in_features, self.out_features)), requires_grad=True)
+self.alpha = nn.Parameter((0.01 * torch.rand(self.in_features, self.out_features)), requires_grad=True)
 
 # The learning rate of plasticity (the same for all plastic connections)
-self.eta = torch.nn.Parameter((self.eta_rate * torch.ones(1)), requires_grad=True)
+self.eta = nn.Parameter((self.eta_rate * torch.ones(1)), requires_grad=True)
 ~~~
 {: .language-python}
 
