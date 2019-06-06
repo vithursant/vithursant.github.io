@@ -5,6 +5,7 @@ description: "Gradient optimized Hebbian plasticity to help mitigate catastrophi
 comments: true
 ---
 
+<i>Note: To learn more about continual learning, check out my blog post: </i> <a href="https://vithursant.com/continual-learning-overview/" target="_blank">Continual Lifelong Learning with Deep Neural Nets</a>.
 
 Deep neural networks (DNNs) are known to be prone to "forgetting", which has
 been coined in the literature as <i>catastrophic forgetting</i> or
