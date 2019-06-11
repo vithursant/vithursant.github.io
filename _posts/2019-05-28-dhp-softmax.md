@@ -83,7 +83,7 @@ Given the activation of each neuron in $h$ at the pre-synaptic connection $i$,
 the unnormalized log probabilities $z$ at the post-synaptic connection $j$ can
 be computed as follows:
 
-$$z_j = \sum_{i \in \text{inputs to} \ j}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{fast}})h_i$$
+$$z_j = \sum_{i = 1}^{m}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{plastic (fast)}})h_i$$
 
 <br />
 Then, we apply the softmax function on $$z$$ to obtain the desired logits
@@ -117,6 +117,10 @@ Hebbian traces to perform inference.
 <br />
 $$\hspace{60pt}$$ ![Frame]({{site.baseurl}}/images/alg1.png){: height="400px" width="400px"}
 
+<br />
+$$\hspace{60pt}$$ ![Frame]({{site.baseurl}}/images/icmldraw19_1.svg){: height="800px" width="800px"}
+<b>Figure:</b> An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1).
+
 ~~~
 def forward(self, h, y, hebb):
     # Only update Hebbian traces during training.
@@ -139,17 +143,17 @@ def forward(self, h, y, hebb):
 ~~~
 {: .language-python}
 
-<br /> <b>Updated Loss</b> <br />
+<br /> <b>Updated Quadratic Loss</b> <br />
 
 <br/>
-Following the existing work for overcoming catastrophic forgetting such as EWC,
-Online EWC, SI and MAS, we regularize the loss, $$\mathcal{L}(\theta)$$, where
+Following the quadratic loss in the existing work for overcoming catastrophic forgetting such as EWC,
+Online EWC, SI and MAS, we regularize the loss, $$\mathcal{L}^{n}(\theta, \alpha, \eta)$$, where
 $$\Omega_{i,j}$$ is an importance measure for each slow weight $$\theta_{i,j}$$
 and determines how plastic the connections should be. Here, least plastic
 weights can retain memories for a longer period of time whereas, more plastic
 weights are considered less important.
 
-$$\mathcal{L}(\theta) = \mathcal{L}^{n}(\theta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}$$
+$$\tilde{\mathcal{L}}^{n}(\theta, \alpha, \eta) = \mathcal{L}^{n}(\theta, \alpha, \eta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}$$
 
 <br/>
 where, $$\theta_{i,j}^{n-1}$$ are the learned network parameters after training on the previous $$n − 1$$ tasks and $$\lambda$$ is a hyperparameter for the regularizer to control the amount of forgetting. 

@@ -133,26 +133,55 @@
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>Deep neural networks (DNNs) are known to be prone to “forgetting”, which has been
-coined in the literature as <i>catastrophic forgetting</i> or <i>catastrophic interference</i> [2, 4].
-This limits the DNN’s ability to perform continual lifelong learning as they face
-the “stability-plasticity” dilemma when retaining memories. Stability refers to the preserving of existing knowledge while, plasticity refers to integrating new knowledge.</p>
+      <p><i>Note: To learn more about continual learning, check out my blog post: </i> <a href="https://vithursant.com/continual-learning-overview/" target="_blank">Continual Lifelong Learning with Deep Neural Nets</a>.</p>
 
 <p><br />
-<b>Synaptic consolidation</b> and <b>Complementary Learning Systems (CLS)</b> are two theories that have been proposed in the neuroscience literature to explain how  humans perform continual learning. The first theory proposes that a proportion of synapses in our neocortex becomes less <i>plastic</i> to retain information for a longer timescale. The second theory suggests that two learning systems are present in our brain: 1) the neocortex slowly learns generalizable structured knowledge 2) the hippocampus performs rapid learning of new experiences. The experiences stored in the the hippocampus are consolidated and replayed to the neocortex in the form of episodic memories to reinforce the synaptic connections.</p>
+Deep neural networks (DNNs) are known to be prone to “forgetting”, which has
+been coined in the literature as <i>catastrophic forgetting</i> or
+<i>catastrophic interference</i> [2, 4]. This limits the DNN’s ability to
+perform continual lifelong learning as they face the “stability-plasticity”
+dilemma when retaining memories. Stability refers to the preserving of existing
+knowledge while, plasticity refers to integrating new knowledge.</p>
 
-<p><br /> <b>Quick Summary</b> <br />
-<br />
-In our paper, we extend <i>differentiable plasticity</i> [4] to a continual learning setting and develop a model that is able to adapt quickly to changing environments as well as consolidating past knowledge by dynapically adjusting the plasticity of synapses. In the softmax layer, we augment the traditional (slow) weights used to train DNNs with a set of plastic (fast) weights using <b>Differentiable Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an auto-associative memory that can rapidly bind deep representations of the data from the penultimate layer to the class labels. We call this new softmax layer as the <b>DHP-Softmax</b>. We also show the flexibility of our model by combining it with popular task-specific synaptic consolidation methods in the literature such as: elastic weight consolidation (EWC) [3, 6], synaptic intelligence (SI) [7] and memory aware synapses (MAS) [1]. Our model is implemented using the PyTorch framework and trained on 
-a single Nvidia Titan V.</p>
+<p><br /> <b>Synaptic consolidation</b> and <b>Complementary Learning Systems
+(CLS)</b> are two theories that have been proposed in the neuroscience
+literature to explain how humans perform continual learning. The first theory
+proposes that a proportion of synapses in our neocortex becomes less
+<i>plastic</i> to retain information for a longer timescale. The second theory
+suggests that two learning systems are present in our brain: 1) the neocortex
+slowly learns generalizable structured knowledge 2) the hippocampus performs
+rapid learning of new experiences. The experiences stored in the the hippocampus
+are consolidated and replayed to the neocortex in the form of episodic memories
+to reinforce the synaptic connections.</p>
+
+<p><br />
+One of the fundamental premises of neuroscience is <b>Hebbian learning</b> [3], which
+suggests that learning and memory in biological neural networks are
+attributed to weight plasticity, that is, the modification of the strength of
+existing synapses according to variants of Hebb’s rule [7, 8].</p>
+
+<p><br /> <b>Quick Summary</b> <br /> <br /> In our paper, we extend
+<i>differentiable plasticity</i> [6] to a continual learning setting and develop
+a model that is able to adapt quickly to changing environments as well as
+consolidating past knowledge by dynapically adjusting the plasticity of
+synapses. In the softmax layer, we augment the traditional (slow) weights used
+to train DNNs with a set of plastic (fast) weights using <b>Differentiable
+Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an
+auto-associative memory that can rapidly bind deep representations of the data
+from the penultimate layer to the class labels. We call this new softmax layer
+as the <b>DHP-Softmax</b>. We also show the flexibility of our model by
+combining it with popular task-specific synaptic consolidation methods in the
+literature such as: elastic weight consolidation (EWC) [4, 9], synaptic
+intelligence (SI) [10] and memory aware synapses (MAS) [1]. Our model is
+implemented using the PyTorch framework and trained on a single Nvidia Titan V.</p>
 
 <p><br /> <b>Our Model</b> <br /></p>
 
-<p><br />
-Each synaptic connection in our model is composed of two weights:</p>
+<p><br /> Each synaptic connection in our model is composed of two weights:</p>
 
 <ul>
-  <li>The slow weights <script type="math/tex">\theta \in \mathbb{R}^{m \times d}</script>, where <script type="math/tex">m</script> is the number of units in the final hidden layer and <script type="math/tex">d</script> is the number of classes.</li>
+  <li>The slow weights <script type="math/tex">\theta \in \mathbb{R}^{m \times d}</script>, where <script type="math/tex">m</script> is the
+number of units in the final hidden layer and <script type="math/tex">d</script> is the number of classes.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialize fixed (slow changing) weights with He initialization.
@@ -160,30 +189,40 @@ Each synaptic connection in our model is composed of two weights:</p>
 <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">kaiming_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </code></pre></div></div>
 <ul>
-  <li>The Hebbian plastic component of the same cardinality as the
-slow weights and made up of two components:
+  <li>The Hebbian plastic component of the same cardinality as the slow weights and
+made up of two components:
     <ul>
-      <li>Hebbian trace, <script type="math/tex">\mathrm{Hebb}</script> – accumulates the mean hidden activations of the mean activations of the penultimate layer for each target label in the mini-batch during training which are denoted by <script type="math/tex">h \in \mathbb{R}^{1 \times m}</script> (using Algorithm 1 as shown below).</li>
-      <li>Plasticity coefficient, <script type="math/tex">\alpha</script> – adjusts the magnitude of <script type="math/tex">\mathrm{Hebb}</script>.</li>
+      <li>Hebbian trace, <script type="math/tex">\mathrm{Hebb}</script> – accumulates the mean hidden activations
+of the mean activations of the penultimate layer for each target label in
+the mini-batch during training which are denoted by <script type="math/tex">h \in \mathbb{R}^{1
+\times m}</script> (using Algorithm 1 as shown below).</li>
+      <li>Plasticity coefficient, <script type="math/tex">\alpha</script> – adjusts the magnitude of
+<script type="math/tex">\mathrm{Hebb}</script>.</li>
     </ul>
   </li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># The alpha scaling coefficients of the plastic connections.
-</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1"># The learning rate of plasticity (the same for all plastic connections)
-</span><span class="bp">self</span><span class="o">.</span><span class="n">eta</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">eta_rate</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="bp">self</span><span class="o">.</span><span class="n">eta</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">eta_rate</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><br />
-Given the activation of each neuron in $h$ at the pre-synaptic connection $i$, the
-unnormalized log probabilities $z$ at the post-synaptic connection $j$ can be computed as follows:</p>
+Given the activation of each neuron in $h$ at the pre-synaptic connection $i$,
+the unnormalized log probabilities $z$ at the post-synaptic connection $j$ can
+be computed as follows:</p>
 
-<script type="math/tex; mode=display">z_j = \sum_{i \in \text{inputs to} \ j}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{fast}})h_i</script>
+<script type="math/tex; mode=display">z_j = \sum_{i = 1}^{m}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{plastic (fast)}})h_i</script>
 
 <p><br />
-Then, we apply the softmax function on <script type="math/tex">z</script> to obtain the desired logits <script type="math/tex">\hat{y}</script> thus, <script type="math/tex">\hat{y} = \mathrm{softmax}(z)</script>. The parameters <script type="math/tex">\alpha_{i,j}</script> and <script type="math/tex">\theta_{i,j}</script> are optimized by gradient descent as the model is trained sequentially on different tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script> is the maximum number of tasks in the respective continual learning benchmarks we experimented on.</p>
+Then, we apply the softmax function on <script type="math/tex">z</script> to obtain the desired logits
+<script type="math/tex">\hat{y}</script> thus, <script type="math/tex">\hat{y} = \mathrm{softmax}(z)</script>. The parameters
+<script type="math/tex">\alpha_{i,j}</script> and <script type="math/tex">\theta_{i,j}</script> are optimized by gradient descent as the
+model is trained sequentially on different tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script>
+is the maximum number of tasks in the respective continual learning benchmarks
+we experimented on.</p>
 
 <p><br /> <b>Hebbian Update Rule</b> <br /></p>
 
@@ -196,10 +235,20 @@ At the start of training the first task $T_{1}$, we initialize <script type="mat
                 <span class="n">requires_grad</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Then we update the Hebbian traces in the forward pass using Algorithm 1 (see below). On line 6, we perform the Hebbian update for the corresponding class, <script type="math/tex">c</script>. This hebbian update method forms a compressed episodic memory in the <script type="math/tex">\mathrm{Hebb}</script> that represents the memory traces for each unique class, <script type="math/tex">c</script>, in the mini-batch.  Across the model’s lifetime, we only update <script type="math/tex">\mathrm{Hebb}</script> during training and during test time, we use the most recent Hebbian traces to perform inference.</p>
+<p>Then we update the Hebbian traces in the forward pass using Algorithm 1 (see
+below). On line 6, we perform the Hebbian update for the corresponding class,
+<script type="math/tex">c</script>. This hebbian update method forms a compressed episodic memory in the
+<script type="math/tex">\mathrm{Hebb}</script> that represents the memory traces for each unique class,
+<script type="math/tex">c</script>, in the mini-batch.  Across the model’s lifetime, we only update
+<script type="math/tex">\mathrm{Hebb}</script> during training and during test time, we use the most recent
+Hebbian traces to perform inference.</p>
 
 <p><br />
 <script type="math/tex">\hspace{60pt}</script> <img src="/images/alg1.png" alt="Frame" height="400px" width="400px" /></p>
+
+<p><br />
+<script type="math/tex">\hspace{60pt}</script> <img src="/images/icmldraw19_1.svg" alt="Frame" height="800px" width="800px" />
+<b>Figure:</b> An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hebb</span><span class="p">):</span>
     <span class="c1"># Only update Hebbian traces during training.
@@ -221,41 +270,49 @@ At the start of training the first task $T_{1}$, we initialize <script type="mat
     <span class="k">return</span> <span class="n">z</span><span class="p">,</span> <span class="n">hebb</span>
 </code></pre></div></div>
 
-<p><br /> <b>Updated Loss</b> <br /></p>
+<p><br /> <b>Updated Quadratic Loss</b> <br /></p>
 
 <p><br />
-Following the existing work for overcoming
-catastrophic forgetting such as EWC, Online EWC, SI and
-MAS, we regularize the loss, <script type="math/tex">\mathcal{L}(\theta)</script>, where <script type="math/tex">\Omega_{i,j}</script> is an importance measure for each slow weight <script type="math/tex">\theta_{i,j}</script> and determines how plastic the connections should be. Here, least plastic weights can retain memories for a longer period of time whereas, more plastic weights are considered less important.</p>
+Following the quadratic loss in the existing work for overcoming catastrophic forgetting such as EWC,
+Online EWC, SI and MAS, we regularize the loss, <script type="math/tex">\mathcal{L}^{n}(\theta, \alpha, \eta)</script>, where
+<script type="math/tex">\Omega_{i,j}</script> is an importance measure for each slow weight <script type="math/tex">\theta_{i,j}</script>
+and determines how plastic the connections should be. Here, least plastic
+weights can retain memories for a longer period of time whereas, more plastic
+weights are considered less important.</p>
 
-<script type="math/tex; mode=display">\mathcal{L}(\theta) = \mathcal{L}^{n}(\theta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}</script>
+<script type="math/tex; mode=display">\tilde{\mathcal{L}}^{n}(\theta, \alpha, \eta) = \mathcal{L}^{n}(\theta, \alpha, \eta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}</script>
 
 <p><br />
 where, <script type="math/tex">\theta_{i,j}^{n-1}</script> are the learned network parameters after training on the previous <script type="math/tex">n − 1</script> tasks and <script type="math/tex">\lambda</script> is a hyperparameter for the regularizer to control the amount of forgetting.</p>
 
 <p><br />
-We adapt these existing synaptic consolidation approaches to DHP-Softmax and only compute the <script type="math/tex">\Omega_{i,j}</script>
-on the slow weights of the network. The plastic part of our
-model can alleviate catastrophic forgetting of learned classes
-by optimizing the plasticity of the synaptic connections.</p>
+We adapt these existing synaptic consolidation approaches to DHP-Softmax and
+only compute the <script type="math/tex">\Omega_{i,j}</script> on the slow weights of the network. The
+plastic part of our model can alleviate catastrophic forgetting of learned
+classes by optimizing the plasticity of the synaptic connections.</p>
 
 <p><br /> <b>Experiments: SplitMNIST Benchmark</b> <br />
 <br />
-A sequence of <script type="math/tex">T_{n=1:5}</script> tasks are generated
-by splitting the original MNIST training dataset into a sequence of 5 binary
-classification tasks: <script type="math/tex">T_1 = \{0/1\}</script>, <script type="math/tex">T_2 =
-\{2/3\}</script>, <script type="math/tex">T_3 = \{4/5\}</script>, <script type="math/tex">T_4 = \{6/7\}</script> and <script type="math/tex">T_5 = \{8/9\}</script>, making
-the output spaces disjoint between tasks. We trained a multi-headed MLP network 
-with two hidden layers of 256 ReLU nonlinearities each, and a cross-entropy loss. 
-We compute the cross-entropy loss, <script type="math/tex">\mathcal{L}(\theta)</script>, at the softmax output layer for the digits present in the current task, <script type="math/tex">T_n</script>. We train the network sequentially on all 5 tasks <script type="math/tex">T_{n=1:5}</script> with mini-batches of size 64 and optimized using plain SGD with a fixed learning rate of 0.01 for 10 epochs. More details on experimental setup and hyperparameter settings can be found in the Appendix section our paper.</p>
+A sequence of <script type="math/tex">T_{n=1:5}</script> tasks are generated by splitting the original MNIST
+training dataset into a sequence of 5 binary classification tasks: <script type="math/tex">T_1 =
+\{0/1\}</script>, <script type="math/tex">T_2 = \{2/3\}</script>, <script type="math/tex">T_3 = \{4/5\}</script>, <script type="math/tex">T_4 = \{6/7\}</script> and <script type="math/tex">T_5 =
+\{8/9\}</script>, making the output spaces disjoint between tasks. We trained a
+multi-headed MLP network with two hidden layers of 256 ReLU nonlinearities each,
+and a cross-entropy loss. We compute the cross-entropy loss,
+<script type="math/tex">\mathcal{L}(\theta)</script>, at the softmax output layer for the digits present in
+the current task, <script type="math/tex">T_n</script>. We train the network sequentially on all 5 tasks
+<script type="math/tex">T_{n=1:5}</script> with mini-batches of size 64 and optimized using plain SGD with a
+fixed learning rate of 0.01 for 10 epochs. More details on experimental setup
+and hyperparameter settings can be found in the Appendix section our paper.</p>
 
 <p><br />
 <script type="math/tex">\hspace{60pt}</script> <img src="/images/benchmark.svg" alt="Frame" height="400px" width="400px" /></p>
 
 <p><br />
-We observe that DHP Softmax provides a 4.7% improvement on test performance compared
-to a finetuned MLP network (refer to the graph above). Also, combining
-DHP Softmax with task-specific consolidation consistently improves performance across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
+We observe that DHP Softmax provides a 4.7% improvement on test performance
+compared to a finetuned MLP network (refer to the graph above). Also, combining
+DHP Softmax with task-specific consolidation consistently improves performance
+across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
 
 <p><br /><b>References</b><br /></p>
 
@@ -269,27 +326,38 @@ Vision (ECCV)</i>, September 2018.</p>
 [2] French, R. Catastrophic forgetting in connectionist networks. <i>Trends in Cognitive Sciences</i>, 3(4):128–135, 1999.</p>
 
 <p><br />
-[3] Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho,
+[3] Hebb, D. O. <i>The organization of behavior; a neuropsychological theory</i>. Wiley, Oxford, England, 1949.</p>
+
+<p><br />
+[4] Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., Milan, K., Quan, J., Ramalho,
 T., Grabska-Barwinska, A., Hassabis, D., Clopath, C.,
 Kumaran, D., and Hadsell, R. Overcoming catastrophic
 forgetting in neural networks. <i>Proceedings of the National Academy of Sciences (PNAS)</i>, 114(13):3521–3526,
 March 2017.</p>
 
 <p><br />
-[4] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.</p>
+[5] McCloskey, M. and Cohen, N. J. Catastrophic interference in connectionist networks: The sequential learning problem. <i>The Psychology of Learning and Motivation</i>, 24: 104–169, 1989.</p>
 
 <p><br />
-[5] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
+[6] Miconi, T., Stanley, K. O., and Clune, J. Differentiable plasticity: training plastic neural networks with backpropagation. In <i>Proceedings of the 35th International Conference
 on Machine Learning (ICML)</i>, pp. 3556–3565, 2018.</p>
 
 <p><br />
-[6] Schwarz, J., Czarnecki, W., Luketina, J., GrabskaBarwinska, A., Teh, Y. W., Pascanu, R., and Hadsell, R.
+[7] Oja, E. Oja learning rule. Scholarpedia, 3(3):3612, 2008</p>
+
+<p><br />
+[8] Paulsen, O. and Sejnowski, T. J. Natural patterns of activity
+and long-term synaptic plasticity. <i>Current Opinion in
+Neurobiology</i>, 10(2):172 – 180, 2000.</p>
+
+<p><br />
+[9] Schwarz, J., Czarnecki, W., Luketina, J., GrabskaBarwinska, A., Teh, Y. W., Pascanu, R., and Hadsell, R.
 Progress &amp; compress: A scalable framework for continual
 learning. In <i>Proceedings of the 35th International Conference on Machine Learning (ICML)</i>, pp. 4535–4544,
 2018.</p>
 
 <p><br />
-[7] Zenke, F., Poole, B., and Ganguli, S. Continual learning
+[10] Zenke, F., Poole, B., and Ganguli, S. Continual learning
 through synaptic intelligence. In <i>Proceedings of the 34th
 International Conference on Machine Learning (ICML)</i>,
 pp. 3987–3995, 2017.</p>

@@ -51,4 +51,8 @@
         <loc>http://localhost:5000/learning-to-teach/</loc>
     </url>
     
+    <url>
+        <loc>http://localhost:5000/devops-for-deep-learning/</loc>
+    </url>
+    
 </urlset>
