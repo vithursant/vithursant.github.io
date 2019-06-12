@@ -163,7 +163,7 @@ existing synapses according to variants of Hebb’s rule [7, 8].</p>
 <p><br /> <b>Quick Summary</b> <br /> <br /> In our paper, we extend
 <i>differentiable plasticity</i> [6] to a continual learning setting and develop
 a model that is able to adapt quickly to changing environments as well as
-consolidating past knowledge by dynapically adjusting the plasticity of
+consolidating past knowledge by dynamically adjusting the plasticity of
 synapses. In the softmax layer, we augment the traditional (slow) weights used
 to train DNNs with a set of plastic (fast) weights using <b>Differentiable
 Hebbian Plasticity (DHP)</b>. This allows the plastic weights to behave as an
@@ -313,6 +313,30 @@ We observe that DHP Softmax provides a 4.7% improvement on test performance
 compared to a finetuned MLP network (refer to the graph above). Also, combining
 DHP Softmax with task-specific consolidation consistently improves performance
 across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
+
+<p><br /><b>Conclusion</b><br />
+We show that catastrophic forgetting can be alleiviated by adding our DHP
+Softmax to a DNN. Also, we demonstrate the flexibility and simplicity of our
+approach by combining it with Online EWC, SI and MAS to regularize the slow
+weights of the network. We do not introduce any additional hyperparameters as
+all of the hyperparameters of the plastic component are learned dynamically by
+the network during training. Finally, we hope this will fosters new progress in 
+gradient-optimized Hebbian plasticity for learning and memory in deep neural networks.</p>
+
+<p><br /><b>Future Work</b><br />
+A natural extension of our work would be to apply DHP throughout all of the layers
+in a feed forward neural network. Also, the current model relies on labels
+to “auto-associate” the classes to deep representations. An interesting line of
+work would be to perform the Hebbian update using a self-supervised representation learning. 
+It would also be
+interesting to see how this approach will perform in the truly online setting
+where the network only sees a small number of data points and is expected to
+maximize forward transfer to learn new tasks efficiently.</p>
+
+<p><br /><b>More Details</b><br />
+You can also read our <a href="" target="_blank">ICML 2019 Adaptive and
+Multi-Task Learning: Algorithms &amp; Systems Workshop</a> paper <a href="https://openreview.net/forum?id=r1x-E5Ss34" target="_blank"><b>Differentiable
+Hebbian Plasticity for Continual Learning</b></a>.</p>
 
 <p><br /><b>References</b><br /></p>
 
