@@ -64,7 +64,7 @@ nn.init.kaiming_uniform_(self.w, a=math.sqrt(5))
   made up of two components:
   * Hebbian trace, $$\mathrm{Hebb}$$ -- accumulates the mean hidden activations
     of the mean activations of the penultimate layer for each target label in
-    the mini-batch during training which are denoted by $$h \in \mathbb{R}^{1
+    the mini-batch during training which are denoted by $$\tilde{h} \in \mathbb{R}^{1
     \times m}$$ (using Algorithm 1 as shown below).
   * Plasticity coefficient, $$\alpha$$ -- adjusts the magnitude of
     $$\mathrm{Hebb}$$.
