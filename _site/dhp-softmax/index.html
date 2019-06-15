@@ -194,7 +194,7 @@ made up of two components:
     <ul>
       <li>Hebbian trace, <script type="math/tex">\mathrm{Hebb}</script> – accumulates the mean hidden activations
 of the mean activations of the penultimate layer for each target label in
-the mini-batch during training which are denoted by <script type="math/tex">h \in \mathbb{R}^{1
+the mini-batch during training which are denoted by <script type="math/tex">\tilde{h} \in \mathbb{R}^{1
 \times m}</script> (using Algorithm 1 as shown below).</li>
       <li>Plasticity coefficient, <script type="math/tex">\alpha</script> – adjusts the magnitude of
 <script type="math/tex">\mathrm{Hebb}</script>.</li>
@@ -227,6 +227,16 @@ we experimented on.</p>
 <p><br /> <b>Hebbian Update Rule</b> <br /></p>
 
 <p><br />
+The Hebbian traces <script type="math/tex">\mathrm{Hebb}</script> are updated as follows:</p>
+
+<script type="math/tex; mode=display">\mathrm{Hebb}_{i,j} := (1-\eta)\mathrm{Hebb}_{i,j} +  \eta \tilde{h}_{i,j}</script>
+
+<p><br />
+where, <script type="math/tex">\eta</script> is the Hebbian learning rate that learns how quickly to acquire new
+experiences into the plastic component. Here, <script type="math/tex">\eta</script> also behaves as a decay term to
+prevent a positive feedback loop in the <script type="math/tex">\mathrm{Hebb}</script>.</p>
+
+<p><br />
 At the start of training the first task $T_{1}$, we initialize <script type="math/tex">\mathrm{Hebb}</script> to zero:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initial_zero_hebb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s">'cuda'</span><span class="p">):</span>
@@ -245,10 +255,6 @@ Hebbian traces to perform inference.</p>
 
 <p><br />
 <script type="math/tex">\hspace{60pt}</script> <img src="/images/alg1.png" alt="Frame" height="400px" width="400px" /></p>
-
-<p><br />
-<script type="math/tex">\hspace{60pt}</script> <img src="/images/icmldraw19_1.svg" alt="Frame" height="800px" width="800px" />
-<b>Figure:</b> An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hebb</span><span class="p">):</span>
     <span class="c1"># Only update Hebbian traces during training.
@@ -269,6 +275,11 @@ Hebbian traces to perform inference.</p>
     
     <span class="k">return</span> <span class="n">z</span><span class="p">,</span> <span class="n">hebb</span>
 </code></pre></div></div>
+
+<p><br /> <b>Hebbian Update Visualization</b> <br />
+<br />
+An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1):
+<script type="math/tex">\hspace{60pt}</script> <img src="/images/icmldraw19_1.svg" alt="Frame" height="800px" width="800px" /></p>
 
 <p><br /> <b>Updated Quadratic Loss</b> <br /></p>
 
@@ -320,18 +331,19 @@ Softmax to a DNN. Also, we demonstrate the flexibility and simplicity of our
 approach by combining it with Online EWC, SI and MAS to regularize the slow
 weights of the network. We do not introduce any additional hyperparameters as
 all of the hyperparameters of the plastic component are learned dynamically by
-the network during training. Finally, we hope this will fosters new progress in 
-gradient-optimized Hebbian plasticity for learning and memory in deep neural networks.</p>
+the network during training. Finally, we hope this will foster new progress in
+continual learning where, methods involving gradient-optimized Hebbian
+plasticity can be used for learning and memory in DNNs.</p>
 
 <p><br /><b>Future Work</b><br />
-A natural extension of our work would be to apply DHP throughout all of the layers
-in a feed forward neural network. Also, the current model relies on labels
-to “auto-associate” the classes to deep representations. An interesting line of
-work would be to perform the Hebbian update using a self-supervised representation learning. 
-It would also be
-interesting to see how this approach will perform in the truly online setting
-where the network only sees a small number of data points and is expected to
-maximize forward transfer to learn new tasks efficiently.</p>
+A natural extension of our work would be to apply DHP throughout all of the
+layers in a feed forward neural network. Also, the current model relies on
+labels to “auto-associate” the classes to deep representations. An interesting
+line of work would be to perform the Hebbian update with a self-supervised
+representation learning technique. It would also be interesting to see how this
+approach will perform in the truly online setting where the network is expected
+to maximize forward transfer from a small number of data points to learn new
+tasks efficiently in a continual learning environment.</p>
 
 <p><br /><b>More Details</b><br />
 You can also read our <a href="" target="_blank">ICML 2019 Adaptive and

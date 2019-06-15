@@ -96,6 +96,16 @@ we experimented on.
 <br /> <b>Hebbian Update Rule</b> <br />
 
 <br />
+The Hebbian traces $$\mathrm{Hebb}$$ are updated as follows:
+
+$$\mathrm{Hebb}_{i,j} := (1-\eta)\mathrm{Hebb}_{i,j} +  \eta \tilde{h}_{i,j}$$
+
+<br />
+where, $$\eta$$ is the Hebbian learning rate that learns how quickly to acquire new
+experiences into the plastic component. Here, $$\eta$$ also behaves as a decay term to
+prevent a positive feedback loop in the $$\mathrm{Hebb}$$.
+
+<br />
 At the start of training the first task $T_{1}$, we initialize $$\mathrm{Hebb}$$ to zero:
 
 ~~~
@@ -116,10 +126,6 @@ Hebbian traces to perform inference.
 
 <br />
 $$\hspace{60pt}$$ ![Frame]({{site.baseurl}}/images/alg1.png){: height="400px" width="400px"}
-
-<br />
-$$\hspace{60pt}$$ ![Frame]({{site.baseurl}}/images/icmldraw19_1.svg){: height="800px" width="800px"}
-<b>Figure:</b> An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1).
 
 ~~~
 def forward(self, h, y, hebb):
@@ -142,6 +148,11 @@ def forward(self, h, y, hebb):
     return z, hebb
 ~~~
 {: .language-python}
+
+<br /> <b>Hebbian Update Visualization</b> <br />
+<br />
+An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1):
+$$\hspace{60pt}$$ ![Frame]({{site.baseurl}}/images/icmldraw19_1.svg){: height="800px" width="800px"}
 
 <br /> <b>Updated Quadratic Loss</b> <br />
 
@@ -194,17 +205,18 @@ Softmax to a DNN. Also, we demonstrate the flexibility and simplicity of our
 approach by combining it with Online EWC, SI and MAS to regularize the slow
 weights of the network. We do not introduce any additional hyperparameters as
 all of the hyperparameters of the plastic component are learned dynamically by
-the network during training. Finally, we hope this will fosters new progress in 
-gradient-optimized Hebbian plasticity for learning and memory in deep neural networks.
+the network during training. Finally, we hope this will foster new progress in
+continual learning where, methods involving gradient-optimized Hebbian
+plasticity can be used for learning and memory in DNNs.
 
 <br /><b>Future Work</b><br/>
 A natural extension of our work would be to apply DHP throughout all of the
 layers in a feed forward neural network. Also, the current model relies on
 labels to "auto-associate" the classes to deep representations. An interesting
-line of work would be to perform the Hebbian update using a self-supervised
-representation learning. It would also be interesting to see how this approach
-will perform in the truly online setting where the network only sees a small
-number of data points and is expected to maximize forward transfer to learn new
+line of work would be to perform the Hebbian update with a self-supervised
+representation learning technique. It would also be interesting to see how this
+approach will perform in the truly online setting where the network is expected
+to maximize forward transfer from a small number of data points to learn new
 tasks efficiently in a continual learning environment.
 
 <br /><b>More Details</b><br/>
