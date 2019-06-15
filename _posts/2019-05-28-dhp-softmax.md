@@ -8,7 +8,7 @@ comments: true
 <i>Note: To learn more about continual learning, check out my blog post: </i> <a href="https://vithursant.com/continual-learning-overview/" target="_blank">Continual Lifelong Learning with Deep Neural Nets</a>.
 
 <br />
-Deep neural networks (DNNs) are known to be prone to "forgetting", which has
+Deep neural networks (DNNs) are prone to "forgetting" past knowledge, which has
 been coined in the literature as <i>catastrophic forgetting</i> or
 <i>catastrophic interference</i> [2, 4]. This limits the DNN's ability to
 perform continual lifelong learning as they face the "stability-plasticity"
