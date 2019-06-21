@@ -12,10 +12,13 @@ a super interesting NIPS 2017 paper called <i>Gradient Episodic Memory for
 Continual Learning</i> [1] from Facebook AI Research (FAIR). 
 
 <br />
-More details coming soon...
+You can download my <a href="https://drive.google.com/file/d/12wPIWhdxkRkkzveYUIJGJHYJnC_sXgvs/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
 
 <br />
-You can download my <a href="https://drive.google.com/file/d/12wPIWhdxkRkkzveYUIJGJHYJnC_sXgvs/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
+![Frame]({{ site.url }}/images/gem_titlepage.png)
+
+<br />
+More details coming soon...
 
 <br /><b>References</b><br/>
 [1] Lopez-Paz, D. and Ranzato, M. Gradient episodic memory for continual learning. In <i>Advances in Neural Information Processing Systems (NIPS) 30</i>, pp. 6467–6476. 2017.

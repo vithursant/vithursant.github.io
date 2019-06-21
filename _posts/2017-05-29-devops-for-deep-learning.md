@@ -12,7 +12,10 @@ TensorFlow with a number of different tools such as: AWS, MAAS, Docker,
 Kubernetes, Juju. 
 
 <br />
-More details coming soon...
+You can download my <a href="https://drive.google.com/file/d/1rUyAx6kFCDhilBE0-Na926t2ltW-KkCk/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
 
 <br />
-You can download my <a href="https://drive.google.com/file/d/1rUyAx6kFCDhilBE0-Na926t2ltW-KkCk/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
+![Frame]({{ site.url }}/images/devops_titlepage.png)
+
+<br />
+More details coming soon...

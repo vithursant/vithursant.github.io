@@ -12,10 +12,13 @@ methods in the literature such as: curriculum learning [1], variants of self-pac
 learning [2, 3], machine teaching [5] and meta-learning [4]. 
 
 <br />
-More details coming soon...
+You can download my <a href="https://drive.google.com/file/d/1FPqqdMW0TjSMoIvgXaoa8vZzxHOCakqk/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
 
 <br />
-You can download my <a href="https://drive.google.com/file/d/1FPqqdMW0TjSMoIvgXaoa8vZzxHOCakqk/view?usp=sharing" target="_blank">Google Slides in PDF</a>.
+![Frame]({{ site.url }}/images/l2t_titlepage.png)
+
+<br />
+More details coming soon...
 
 <br /><b>References</b><br/>
 <br />
