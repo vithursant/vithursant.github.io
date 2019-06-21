@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning Features by Watching Objects Move (Unsupervised Learning Paper Review)
+title: CVPR 2017 - Learning Features by Watching Objects Move (Unsupervised Learning Paper Review)
 description: "A paper review of an unsupervised learning method presented at CVPR 2017."
 comments: true
 ---
