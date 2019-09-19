@@ -14,7 +14,7 @@
 		<meta name="twitter:image" content=
 			
 				
-						"http://localhost:5000/images/"
+						"http://localhost:4000/images/"
 				
 			
 		>
@@ -29,15 +29,15 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)">
 <meta property="og:description" content="A paper review of an unsupervised learning method presented at CVPR 2017.">
-<meta property="og:url" content="http://localhost:5000/learning-features-by-watching-objects/">
+<meta property="og:url" content="http://localhost:4000/learning-features-by-watching-objects/">
 <meta property="og:site_name" content="Vithursan -- Personal Site">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:5000/learning-features-by-watching-objects/">
-<link href="http://localhost:5000/feed.xml" type="application/atom+xml" rel="alternate" title="Vithursan -- Personal Site Feed">
+<link rel="canonical" href="http://localhost:4000/learning-features-by-watching-objects/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Vithursan -- Personal Site Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -48,30 +48,30 @@
 <!-- Google Webfonts -->
 <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:5000/assets/css/main.min.css">
-<link rel="stylesheet" href="http://localhost:5000/assets/academicons.css" />
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.min.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/academicons.css" />
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="http://localhost:5000/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="http://localhost:5000/assets/js/vendor/respond.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://localhost:5000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 <!-- Icons -->
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-<link rel="shortcut icon" href="http://localhost:5000/favicon.ico">
-<link rel="shortcut icon" href="http://localhost:5000/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="192x192" href="http://localhost:5000/images/apple-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="192x192" href="http://localhost:4000/images/apple-icon-precomposed.png">
 
 </head>
 
@@ -81,19 +81,19 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://localhost:5000">Vithursan -- Personal Site</a>
+		<a href="http://localhost:4000">Vithursan -- Personal Site</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
 		    <ul>
 		        
-				<li><a href="http://localhost:5000/cv/" >CV</a></li>
+				<li><a href="http://localhost:4000/cv/" >CV</a></li>
 		        
-				<li><a href="http://localhost:5000/publications/" >Publications</a></li>
+				<li><a href="http://localhost:4000/publications/" >Publications</a></li>
 		        
-				<li><a href="http://localhost:5000/code/" >Code</a></li>
+				<li><a href="http://localhost:4000/code/" >Code</a></li>
 		        
-				<li><a href="http://localhost:5000/blog/" >Blog</a></li>
+				<li><a href="http://localhost:4000/blog/" >Blog</a></li>
 		        
 		    </ul>
 		</nav>
@@ -105,7 +105,7 @@
 <div id="main" role="main">
   <div class="article-author-side">
     
-	<img src="http://localhost:5000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
+	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
 <p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
@@ -129,7 +129,7 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:5000/learning-features-by-watching-objects/" rel="bookmark" title="CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)">CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)</a></h1>
+        <h1><a href="http://localhost:4000/learning-features-by-watching-objects/" rel="bookmark" title="CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)">CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
@@ -139,19 +139,19 @@
 The proposed method is motivated by human vision studies, where infants and newly sighted congenitally blind people tend to oversegment static objects, but can group things properly when they move. Experiments done on humans recovering from blindness show that shortly after gaining sight, they are better able to name objects that tend to be seen in motion compared to objects that tend to be seen at rest. The work presented in this paper is related to unsupervised learning by generating images, self-supervision via pretext tasks, and learning  from  motion  and  action.  The authors propose to train Convolutional Neural Networks (CNN) for the task of  object foreground versus  background segmentation, using  unsupervised motion  segmentation  to  provide  ‘pseudo  ground  truth’. In the figure below we see that a strong, high-level feature representation is learned by training CNNs to group pixels in static images into objects  without  any  class labels. A segmentation mask is generated by using optical flow to group pixels into a single object based on the ones that move in the same direction (motion information).</p>
 
 <p><br />
-<img src="http://localhost:5000/images/ufl_1.png" alt="Frame" /></p>
+<img src="http://localhost:4000/images/ufl_1.png" alt="Frame" /></p>
 
 <p><br />
 The generated segmentation masks are used as targets to task a CNN with predicting these masks from single, static frames without any motion information. To enable comparisons to prior work on unsupervised feature learning, they use AlexNet for their CNN architecture. Also, they use images and annotations from the training/validation set of the COCO dataset, discarding the class labels and only using the segmentations. An overview of their approach is shown in the figure below, where they use motion information to segment objects in videos without any supervision. Then, they train a CNN to predict these segmentations from static frames, i.e. without any motion information. Here, the first column is the original video frame, the second column is the mask and the third column is the output of the CNN. Their unsupervised motion segmentation algorithm is able to highlight the moving object even in potentially cluttered scenes, but is often noisy, and sometimes fails (last two rows). Nevertheless, the authors show that the CNN can still learn from this noisy data and produce significantly better and smoother segmentations.</p>
 
 <p><br />
-<img src="http://localhost:5000/images/ufl_2.png" alt="Frame" /></p>
+<img src="http://localhost:4000/images/ufl_2.png" alt="Frame" /></p>
 
 <p><br />
 Following recent work on unsupervised learning, the authors also evaluated their learned representations by performing experiments on the task of object detection. They tested on the PASCAL Visual Objects Classes (VOC) 2007 dataset using Fast R-CNN and compared their unsupervised motion segmentation algorithm with some of the state-of-the-art methods~(see table below). It can be seen that there is a noticeable difference between supervised learning and unsupervised learning methods. However, the experimental results show that their unsupervised motion segmentation method achieves the best performance in the majority of settings, in comparison to other unsupervised methods. The learned representations are transferred to other recognition tasks to show generalization across tasks such as image classification and semantic segmentation. They experimented with image classification  on  PASCAL  VOC  2007  (object  categories) and Stanford 40 Actions (action labels). Lastly, they use fully-connected CNNs  for  semantic  segmentation on the PASCAL VOC 2011.</p>
 
 <p><br />
-<img src="http://localhost:5000/images/results.png" alt="Frame" /></p>
+<img src="http://localhost:4000/images/results.png" alt="Frame" /></p>
 
 <p><br />
 One limitation is that their approach sometimes fails to segment the object in noisy data (such as cluttered scenes). Another limitation of this approach is that it often  fails  on  videos  in  the  wild. This is because the assumption of there being a single moving object in the video is not satisfied, especially in long videos made up of multiple shots showing different objects. A future line of work would be to explore how the single-frame output from the CNN and the noisy motion information extracted from videos can be combined to generate a better pseudo ground truth.</p>
@@ -165,7 +165,7 @@ One limitation is that their approach sometimes fails to segment the object in n
       <footer role="contentinfo">
         <div class="article-author-bottom">
           
-	<img src="http://localhost:5000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
+	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
 <p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
@@ -186,7 +186,7 @@ One limitation is that their approach sometimes fails to segment the object in n
 
 
         </div>
-        <p class="byline"><strong>CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)</strong> was published on <time datetime="2017-10-15T00:00:00-07:00">October 15, 2017</time> by <a href="http://localhost:5000" title="About Vithursan Thangarasa">Vithursan Thangarasa</a>.</p>
+        <p class="byline"><strong>CVPR 2017 - Learning Features by Watching Objects Move (Paper Review)</strong> was published on <time datetime="2017-10-15T00:00:00-07:00">October 15, 2017</time> by <a href="http://localhost:4000" title="About Vithursan Thangarasa">Vithursan Thangarasa</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -203,8 +203,8 @@ One limitation is that their approach sometimes fails to segment the object in n
 </div><!-- /.footer-wrap -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://localhost:5000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://localhost:5000/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
 <!-- Asynchronous Google Analytics snippet -->
 <script>
