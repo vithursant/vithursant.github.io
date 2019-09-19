@@ -9,21 +9,25 @@ image:
 
 <i>“I do think it’s important to follow your dreams and do something which you
 are excited by. If you follow your heart and do what you like, you will always
-do much better. It doesn’t matter what your educational qualification is."</i> 
-<a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">- Sundar Pichai</a>
+do much better. It doesn’t matter what your educational qualification is."</i>
+<a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">- Sundar
+Pichai</a>
 
 <br />
-I am a Graduate Student Researcher at
- <a href="https://www.uoguelph.ca/engineering/" target="_blank">University
-of Guelph's</a> Machine Learning Research Group (MLRG) and the <a href="https://vectorinstitute.ai/"
-target="_blank">Vector Institute for Artificial Intelligence</a>, advised by <a
-href="https://www.gwtaylor.ca/" target="_blank">Dr. Graham W. Taylor</a>. 
+I am a Graduate Student Researcher at <a
+href="https://www.uoguelph.ca/engineering/" target="_blank">University of
+Guelph's</a> Machine Learning Research Group (MLRG) and the <a
+href="https://vectorinstitute.ai/" target="_blank">Vector Institute for
+Artificial Intelligence</a>, advised by <a href="https://www.gwtaylor.ca/"
+target="_blank">Dr. Graham W. Taylor</a>. 
 
 <br />
-Previously, I worked at <a href="https://www.uber.com/us/en/uberai/"
-target="_blank">Uber AI Labs</a>, <a href="https://www.tesla.com/"
-target="_blank">Tesla</a>, <a href="https://digitalfactory.scotiabank.com/"
-target="_blank">Scotiabank's Artificial Intelligence & Machine Learning Group</a>, <a
+Previously, I worked at <a href="https://www.cerebras.net/"
+target="_blank">Cerebras Systems</a>, <a
+href="https://www.uber.com/us/en/uberai/" target="_blank">Uber AI Labs</a>, <a
+href="https://www.tesla.com/" target="_blank">Tesla</a>, <a
+href="https://digitalfactory.scotiabank.com/" target="_blank">Scotiabank's
+Artificial Intelligence & Machine Learning Group</a>, <a
 href="https://www.onsemi.com/PowerSolutions/home.do" target="_blank">ON
 Semiconductor</a>, <a href="https://evertz.com/" target="_blank">Evertz
 Microsystems</a> and <a
