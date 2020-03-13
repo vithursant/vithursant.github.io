@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '>= 3.6.3'
+gem 'jekyll'#, '>= 3.6.3'
 gem 'jekyll-sitemap'
 gem 'jekyll-assets'
-gem 'octopress', '~> 3.0.0.rc.12'
+gem 'octopress'#, '~> 3.0.0.rc.12'
 gem 'rouge'
-gem 'ffi', '>= 1.9.24'
+gem 'ffi'#, '>= 1.9.24'
 gem "html-proofer"
 gem "jekyll-paginate-v2"
 gem "jemoji"
@@ -19,7 +19,7 @@ gem 'jekyll-gist'
 gem 'jekyll-seo'
 gem 'jekyll-seo-tag'
 gem 'jekyll-last-modified-at'
-gem "sprockets", "4.0.0.beta7"
+gem "sprockets"#, "4.0.0.beta7"
 gem "image_optim"
 gem "image_optim_bin" # Optional
 gem "image_optim_pack"

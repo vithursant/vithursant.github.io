@@ -1,3 +1,7 @@
+.jekyll-cache/
+=1.8.2
+_site/=1.8.2
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
