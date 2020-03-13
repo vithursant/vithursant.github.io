@@ -29,6 +29,7 @@ document.onclick = function(e) {
   }
 };
 
+
 /*! Plugin options and other jQuery stuff */
 
 // FitVids options

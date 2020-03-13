@@ -5,6 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include _head.html %}
+{% include _zoomin.html %}
+
 </head>
 
 <body class="page">
@@ -111,8 +113,51 @@ V. Thangarasa, <a href="https://scholar.google.com/citations?user=sRExIHkAAAAJ&h
 </div>
 </li>
 
+<!-- <img src="../images/revup.png" alt="Girl in a jacket" style="width:1161;height:817;"> -->
+<!-- Trigger the Modal -->
+<img id="revup_poster" src="../images/revup.png" style="width:1161;height:817;">
+
+<!-- The Modal -->
+<div id="RevUp" class="modal">
+
+  <!-- The Close Button -->
+  <span id="revup_close" class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="revup_img">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="revup_caption"></div>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("RevUp");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("revup_poster");
+  var modalImg = document.getElementById("revup_img");
+  var captionText = document.getElementById("revup_caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementById("revup_close");
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+
+
+<li ><p></p></li>
+
 <!-- Item: Maninis2018b -->
-<li ><p>
+<li ><p> 
   <a href="https://scholar.google.com/citations?user=UUKxm4gAAAAJ&hl=en" target="_blank">V. Thangarasa</a>
   <br><b>Differentiable Hebbian Consolidation for Continual Lifelong Learning</b><br>
   <i>Master's Thesis,</i>
@@ -134,6 +179,35 @@ V. Thangarasa, <a href="https://scholar.google.com/citations?user=sRExIHkAAAAJ&h
   </pre>
   </div>
   </li>
+
+  <img id="thesis_poster" src="../images/thesis_.jpg" style="width:480;height:513.6;">
+<div id="Thesis" class="modal">
+  <span id="thesis_close" class="close">&times;</span>
+  <img class="modal-content" id="thesis_img">
+  <div id="thesis_caption"></div>
+</div>
+
+<script>
+  var modal = document.getElementById("Thesis");
+  
+  var img = document.getElementById("thesis_poster");
+  var modalImg = document.getElementById("thesis_img");
+  var captionText = document.getElementById("thesis_caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  var span = document.getElementById("thesis_close");
+  
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+</script>
+
+<li ><p></p></li>
 
 <!-- Item: Maninis2018b -->
 <li ><p>
@@ -161,6 +235,34 @@ V. Thangarasa, <a href="https://scholar.google.com/citations?user=EXun8woAAAAJ&h
 </div>
 </li>
 
+<img id="dhp_poster" src="../images/DHP_for_Continual_Learning.png" style="width:1161;height:817;">
+<div id="DHP" class="modal">
+  <span id="dhp_close" class="close">&times;</span>
+  <img class="modal-content" id="dhp_img">
+  <div id="dhp_caption"></div>
+</div>
+
+<script>
+  var modal = document.getElementById("DHP");
+  
+  var img = document.getElementById("dhp_poster");
+  var modalImg = document.getElementById("dhp_img");
+  var captionText = document.getElementById("dhp_caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  var span = document.getElementById("dhp_close");
+  
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+</script>
+
+<li ><p></p></li>
 
 <!-- Item: Maninis2018 -->
 <li ><p>
@@ -186,6 +288,33 @@ V. Thangarasa, <a href="https://scholar.google.com/citations?user=EXun8woAAAAJ&h
 </pre>
 </div>
 </li>
+
+<img id="bmvc_poster" src="../images/bmvc.png" style="width:723;height:1020.8;">
+<div id="BMVC" class="modal">
+  <span id="bmvc_close" class="close">&times;</span>
+  <img class="modal-content" id="bmvc_img">
+  <div id="bmvc_caption"></div>
+</div>
+
+<script>
+  var modal = document.getElementById("BMVC");
+  
+  var img = document.getElementById("bmvc_poster");
+  var modalImg = document.getElementById("bmvc_img");
+  var captionText = document.getElementById("bmvc_caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  var span = document.getElementById("bmvc_close");
+  
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+</script>
 
       </ul>
     </div><!-- /.article-wrap -->
