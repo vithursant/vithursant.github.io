@@ -108,7 +108,7 @@
 	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
-<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<p>Originally from Toronto, Canada, and currently based in the San Francisco Bay Area, I am deeply passionate about neural network compression, large-scale foundation models, and enhancing the efficiency of training large neural networks, with a keen interest in generative AI.</p>
 <a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
 <a href="http://scholar.google.com/citations?user=UUKxm4gAAAAJ&hl=en" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
 
@@ -146,8 +146,8 @@ system to make it versatile, holistic and truly “intelligent”.</p>
 
 <p><br /> <b>Single-Task Learning</b> <br /> In traditional supervised machine
 learning (ML) setups, we train deep neural network (DNN) models independently on
-datasets consisting of the inputs and labels, <script type="math/tex">\{\mathcal{X}_n,
-\mathcal{Y}_n\}</script>, which I enumerate as tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script> is
+datasets consisting of the inputs and labels, \(\{\mathcal{X}_n,
+\mathcal{Y}_n\}\), which I enumerate as tasks \(T_{1:nmax}\), where \(nmax\) is
 the maximum number tasks the model is expected to learn from. This is the most
 commonly used ML paradigm in practice. However, this leads to huge computational
 loads and scalability issues because we need aggregate the old and new data each
@@ -178,15 +178,15 @@ continuously and reliably from new data in a scalable manner but without
 compromising on the knowledge obtained from previous training.</p>
 
 <p><br /> <b>Continual Learning</b> <br /> In continual learning, a DNN learns the
-tasks <script type="math/tex">T_{1:nmax}</script> in a sequential manner, and when faced with the <script type="math/tex">n^{th}</script>
-task it uses the relevant knowledge gained in the past <script type="math/tex">n-1</script> tasks to help
-learning for the <script type="math/tex">n^{th}</script> task. This suggests that a DNN should generate some
+tasks \(T_{1:nmax}\) in a sequential manner, and when faced with the \(n^{th}\)
+task it uses the relevant knowledge gained in the past \(n-1\) tasks to help
+learning for the \(n^{th}\) task. This suggests that a DNN should generate some
 prior knowledge from the past observed tasks to help future task learning
-without even observing any information from future task <script type="math/tex">T_{n+1}</script>. Ideally, in
-the continual learning setup we aim for <script type="math/tex">nmax = \infty</script>.  As we can see, this
+without even observing any information from future task \(T_{n+1}\). Ideally, in
+the continual learning setup we aim for \(nmax = \infty\).  As we can see, this
 is different from the traditional ML training setup because the prior knowledge
-may be generated from the <script type="math/tex">n-1</script> tasks with or without considering the
-<script type="math/tex">n^{th}</script> task’s data. That way, the learning becomes truly lifelong and
+may be generated from the \(n-1\) tasks with or without considering the
+\(n^{th}\) task’s data. That way, the learning becomes truly lifelong and
 autonomous. It is also important to note that we are not jointly optimizing all
 new and past tasks, but only the task we are currently training on. Now, I’ll
 refer to this as <i>ML 2.0</i>.</p>
@@ -251,7 +251,7 @@ Neural Networks: A Review. <i>Corr</i>, abs/1802.07569, 2018.</p>
 	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
-<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<p>Originally from Toronto, Canada, and currently based in the San Francisco Bay Area, I am deeply passionate about neural network compression, large-scale foundation models, and enhancing the efficiency of training large neural networks, with a keen interest in generative AI.</p>
 <a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
 <a href="http://scholar.google.com/citations?user=UUKxm4gAAAAJ&hl=en" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
 
@@ -280,7 +280,7 @@ Neural Networks: A Review. <i>Corr</i>, abs/1802.07569, 2018.</p>
 
 <div class="footer-wrap">
   <footer>
-    <span>&copy; 2020 Vithursan Thangarasa. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+    <span>&copy; 2024 Vithursan Thangarasa. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->

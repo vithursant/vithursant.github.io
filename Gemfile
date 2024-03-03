@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '3.3.0'
+
 gem 'jekyll'#, '>= 3.6.3'
 gem 'jekyll-sitemap'
 gem 'jekyll-assets'

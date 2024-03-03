@@ -108,7 +108,7 @@
 	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
-<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<p>Originally from Toronto, Canada, and currently based in the San Francisco Bay Area, I am deeply passionate about neural network compression, large-scale foundation models, and enhancing the efficiency of training large neural networks, with a keen interest in generative AI.</p>
 <a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
 <a href="http://scholar.google.com/citations?user=UUKxm4gAAAAJ&hl=en" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
 
@@ -180,33 +180,33 @@ implemented using the PyTorch framework and trained on a single Nvidia Titan V.<
 <p><br /> Each synaptic connection in our model is composed of two weights:</p>
 
 <ul>
-  <li>The slow weights <script type="math/tex">\theta \in \mathbb{R}^{m \times d}</script>, where <script type="math/tex">m</script> is the
-number of units in the final hidden layer and <script type="math/tex">d</script> is the number of classes.</li>
+  <li>The slow weights \(\theta \in \mathbb{R}^{m \times d}\), where \(m\) is the
+number of units in the final hidden layer and \(d\) is the number of classes.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialize fixed (slow changing) weights with He initialization.
-</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">))</span>
-<span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">kaiming_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</span><span class="n">self</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="nc">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nc">Tensor</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">in_features</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">out_features</span><span class="p">))</span>
+<span class="n">nn</span><span class="p">.</span><span class="n">init</span><span class="p">.</span><span class="nf">kaiming_uniform_</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </code></pre></div></div>
 <ul>
   <li>The Hebbian plastic component of the same cardinality as the slow weights and
 made up of two components:
     <ul>
-      <li>Hebbian trace, <script type="math/tex">\mathrm{Hebb}</script> – accumulates the mean hidden activations
+      <li>Hebbian trace, \(\mathrm{Hebb}\) – accumulates the mean hidden activations
 of the mean activations of the penultimate layer for each target label in
-the mini-batch during training which are denoted by <script type="math/tex">\tilde{h} \in \mathbb{R}^{1
-\times m}</script> (using Algorithm 1 as shown below).</li>
-      <li>Plasticity coefficient, <script type="math/tex">\alpha</script> – adjusts the magnitude of
-<script type="math/tex">\mathrm{Hebb}</script>.</li>
+the mini-batch during training which are denoted by \(\tilde{h} \in \mathbb{R}^{1
+\times m}\) (using Algorithm 1 as shown below).</li>
+      <li>Plasticity coefficient, \(\alpha\) – adjusts the magnitude of
+\(\mathrm{Hebb}\).</li>
     </ul>
   </li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># The alpha scaling coefficients of the plastic connections.
-</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="n">self</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="nc">Parameter</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">torch</span><span class="p">.</span><span class="nf">rand</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">in_features</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">out_features</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1"># The learning rate of plasticity (the same for all plastic connections)
-</span><span class="bp">self</span><span class="o">.</span><span class="n">eta</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">eta_rate</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="n">self</span><span class="p">.</span><span class="n">eta</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="nc">Parameter</span><span class="p">((</span><span class="n">self</span><span class="p">.</span><span class="n">eta_rate</span> <span class="o">*</span> <span class="n">torch</span><span class="p">.</span><span class="nf">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><br />
@@ -214,64 +214,64 @@ Given the activation of each neuron in $h$ at the pre-synaptic connection $i$,
 the unnormalized log probabilities $z$ at the post-synaptic connection $j$ can
 be computed as follows:</p>
 
-<script type="math/tex; mode=display">z_j = \sum_{i = 1}^{m}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{plastic (fast)}})h_i</script>
+\[z_j = \sum_{i = 1}^{m}(\underbrace{\theta_{i,j}}_{\text{slow}} + \underbrace{\alpha_{i,j}\mathrm{Hebb}_{i,j}}_{\text{plastic (fast)}})h_i\]
 
 <p><br />
-Then, we apply the softmax function on <script type="math/tex">z</script> to obtain the desired logits
-<script type="math/tex">\hat{y}</script> thus, <script type="math/tex">\hat{y} = \mathrm{softmax}(z)</script>. The parameters
-<script type="math/tex">\alpha_{i,j}</script> and <script type="math/tex">\theta_{i,j}</script> are optimized by gradient descent as the
-model is trained sequentially on different tasks <script type="math/tex">T_{1:nmax}</script>, where <script type="math/tex">nmax</script>
+Then, we apply the softmax function on \(z\) to obtain the desired logits
+\(\hat{y}\) thus, \(\hat{y} = \mathrm{softmax}(z)\). The parameters
+\(\alpha_{i,j}\) and \(\theta_{i,j}\) are optimized by gradient descent as the
+model is trained sequentially on different tasks \(T_{1:nmax}\), where \(nmax\)
 is the maximum number of tasks in the respective continual learning benchmarks
 we experimented on.</p>
 
 <p><br /> <b>Hebbian Update Rule</b> <br /></p>
 
 <p><br />
-The Hebbian traces <script type="math/tex">\mathrm{Hebb}</script> are updated as follows:</p>
+The Hebbian traces \(\mathrm{Hebb}\) are updated as follows:</p>
 
-<script type="math/tex; mode=display">\mathrm{Hebb}_{i,j} := (1-\eta)\mathrm{Hebb}_{i,j} +  \eta \tilde{h}_{i,j}</script>
-
-<p><br />
-where, <script type="math/tex">\eta</script> is the Hebbian learning rate that learns how quickly to acquire new
-experiences into the plastic component. Here, <script type="math/tex">\eta</script> also behaves as a decay term to
-prevent a positive feedback loop in the <script type="math/tex">\mathrm{Hebb}</script>.</p>
+\[\mathrm{Hebb}_{i,j} := (1-\eta)\mathrm{Hebb}_{i,j} +  \eta \tilde{h}_{i,j}\]
 
 <p><br />
-At the start of training the first task $T_{1}$, we initialize <script type="math/tex">\mathrm{Hebb}</script> to zero:</p>
+where, \(\eta\) is the Hebbian learning rate that learns how quickly to acquire new
+experiences into the plastic component. Here, \(\eta\) also behaves as a decay term to
+prevent a positive feedback loop in the \(\mathrm{Hebb}\).</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initial_zero_hebb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s">'cuda'</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
-    <span class="k">return</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">),</span> 
-                <span class="n">requires_grad</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+<p><br />
+At the start of training the first task $T_{1}$, we initialize \(\mathrm{Hebb}\) to zero:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initial_zero_hebb</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="sh">'</span><span class="s">cuda</span><span class="sh">'</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+    <span class="k">return</span> <span class="nc">Variable</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">in_features</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">out_features</span><span class="p">),</span> 
+                <span class="n">requires_grad</span><span class="o">=</span><span class="bp">False</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">device</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Then we update the Hebbian traces in the forward pass using Algorithm 1 (see
 below). On line 6, we perform the Hebbian update for the corresponding class,
-<script type="math/tex">c</script>. This hebbian update method forms a compressed episodic memory in the
-<script type="math/tex">\mathrm{Hebb}</script> that represents the memory traces for each unique class,
-<script type="math/tex">c</script>, in the mini-batch.  Across the model’s lifetime, we only update
-<script type="math/tex">\mathrm{Hebb}</script> during training and during test time, we use the most recent
+\(c\). This hebbian update method forms a compressed episodic memory in the
+\(\mathrm{Hebb}\) that represents the memory traces for each unique class,
+\(c\), in the mini-batch.  Across the model’s lifetime, we only update
+\(\mathrm{Hebb}\) during training and during test time, we use the most recent
 Hebbian traces to perform inference.</p>
 
 <p><br />
-<script type="math/tex">\hspace{60pt}</script> <img src="/images/alg1.png" alt="Frame" height="400px" width="400px" /></p>
+\(\hspace{60pt}\) <img src="/images/alg1.png" alt="Frame" height="400px" width="400px" /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hebb</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hebb</span><span class="p">):</span>
     <span class="c1"># Only update Hebbian traces during training.
-</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+</span>    <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">training</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
             <span class="c1"># Get indices of corresponding class, c, in y.
-</span>            <span class="n">y_c_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span>
+</span>            <span class="n">y_c_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">).</span><span class="nf">nonzero</span><span class="p">()</span>
             <span class="c1"># Count total occurences of corresponding class, c in y.
-</span>            <span class="n">s</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
+</span>            <span class="n">s</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">h_bar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">y_c_idx</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
-                <span class="n">hebb</span><span class="p">[:,</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta</span><span class="p">),</span> 
-                                <span class="n">hebb</span><span class="p">[:,</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">clone</span><span class="p">()),</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">h_bar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta</span><span class="p">))</span> 
+                <span class="n">h_bar</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">div</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">y_c_idx</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="n">s</span><span class="p">.</span><span class="nf">item</span><span class="p">())</span>
+                <span class="n">hebb</span><span class="p">[:,</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">mul</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="nf">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">eta</span><span class="p">),</span> 
+                                <span class="n">hebb</span><span class="p">[:,</span><span class="n">c</span><span class="p">].</span><span class="nf">clone</span><span class="p">()),</span> <span class="n">torch</span><span class="p">.</span><span class="nf">mul</span><span class="p">(</span><span class="n">h_bar</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">eta</span><span class="p">))</span> 
 
     <span class="c1"># Compute softmax pre-activations with plastic (fast) weights.
-</span>    <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">hebb</span><span class="p">))</span>
+</span>    <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">mm</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">w</span> <span class="o">+</span> <span class="n">torch</span><span class="p">.</span><span class="nf">mul</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">hebb</span><span class="p">))</span>
     
     <span class="k">return</span> <span class="n">z</span><span class="p">,</span> <span class="n">hebb</span>
 </code></pre></div></div>
@@ -279,51 +279,51 @@ Hebbian traces to perform inference.</p>
 <p><br /> <b>Hebbian Update Visualization</b> <br />
 <br />
 An example of a Hebbian update for the active class c = 1 (see Line 4 in Algorithm 1):
-<script type="math/tex">\hspace{60pt}</script> <img src="/images/icmldraw19_1.svg" alt="Frame" height="800px" width="800px" /></p>
+\(\hspace{60pt}\) <img src="/images/icmldraw19_1.svg" alt="Frame" height="800px" width="800px" /></p>
 
 <p><br /> <b>Updated Quadratic Loss</b> <br /></p>
 
 <p><br />
 Following the quadratic loss in the existing work for overcoming catastrophic forgetting such as EWC,
-Online EWC, SI and MAS, we regularize the loss, <script type="math/tex">\mathcal{L}^{n}(\theta, \alpha, \eta)</script>, where
-<script type="math/tex">\Omega_{i,j}</script> is an importance measure for each slow weight <script type="math/tex">\theta_{i,j}</script>
+Online EWC, SI and MAS, we regularize the loss, \(\mathcal{L}^{n}(\theta, \alpha, \eta)\), where
+\(\Omega_{i,j}\) is an importance measure for each slow weight \(\theta_{i,j}\)
 and determines how plastic the connections should be. Here, least plastic
 weights can retain memories for a longer period of time whereas, more plastic
 weights are considered less important.</p>
 
-<script type="math/tex; mode=display">\tilde{\mathcal{L}}^{n}(\theta, \alpha, \eta) = \mathcal{L}^{n}(\theta, \alpha, \eta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}</script>
+\[\tilde{\mathcal{L}}^{n}(\theta, \alpha, \eta) = \mathcal{L}^{n}(\theta, \alpha, \eta) + \underbrace{\lambda\sum_{i,j}\Omega_{i,j}(\theta_{i,j}^{n} - \theta_{i,j}^{n-1})^{2}}_{\text{regularizer}}\]
 
 <p><br />
-where, <script type="math/tex">\theta_{i,j}^{n-1}</script> are the learned network parameters after training on the previous <script type="math/tex">n − 1</script> tasks and <script type="math/tex">\lambda</script> is a hyperparameter for the regularizer to control the amount of forgetting.</p>
+where, \(\theta_{i,j}^{n-1}\) are the learned network parameters after training on the previous \(n − 1\) tasks and \(\lambda\) is a hyperparameter for the regularizer to control the amount of forgetting.</p>
 
 <p><br />
 We adapt these existing synaptic consolidation approaches to DHP-Softmax and
-only compute the <script type="math/tex">\Omega_{i,j}</script> on the slow weights of the network. The
+only compute the \(\Omega_{i,j}\) on the slow weights of the network. The
 plastic part of our model can alleviate catastrophic forgetting of learned
 classes by optimizing the plasticity of the synaptic connections.</p>
 
 <p><br /> <b>Experiments: SplitMNIST Benchmark</b> <br />
 <br />
-A sequence of <script type="math/tex">T_{n=1:5}</script> tasks are generated by splitting the original MNIST
-training dataset into a sequence of 5 binary classification tasks: <script type="math/tex">T_1 =
-\{0/1\}</script>, <script type="math/tex">T_2 = \{2/3\}</script>, <script type="math/tex">T_3 = \{4/5\}</script>, <script type="math/tex">T_4 = \{6/7\}</script> and <script type="math/tex">T_5 =
-\{8/9\}</script>, making the output spaces disjoint between tasks. We trained a
+A sequence of \(T_{n=1:5}\) tasks are generated by splitting the original MNIST
+training dataset into a sequence of 5 binary classification tasks: \(T_1 =
+\{0/1\}\), \(T_2 = \{2/3\}\), \(T_3 = \{4/5\}\), \(T_4 = \{6/7\}\) and \(T_5 =
+\{8/9\}\), making the output spaces disjoint between tasks. We trained a
 multi-headed MLP network with two hidden layers of 256 ReLU nonlinearities each,
 and a cross-entropy loss. We compute the cross-entropy loss,
-<script type="math/tex">\mathcal{L}(\theta)</script>, at the softmax output layer for the digits present in
-the current task, <script type="math/tex">T_n</script>. We train the network sequentially on all 5 tasks
-<script type="math/tex">T_{n=1:5}</script> with mini-batches of size 64 and optimized using plain SGD with a
+\(\mathcal{L}(\theta)\), at the softmax output layer for the digits present in
+the current task, \(T_n\). We train the network sequentially on all 5 tasks
+\(T_{n=1:5}\) with mini-batches of size 64 and optimized using plain SGD with a
 fixed learning rate of 0.01 for 10 epochs. More details on experimental setup
 and hyperparameter settings can be found in the Appendix section our paper.</p>
 
 <p><br />
-<script type="math/tex">\hspace{60pt}</script> <img src="/images/benchmark.svg" alt="Frame" height="400px" width="400px" /></p>
+\(\hspace{60pt}\) <img src="/images/benchmark.svg" alt="Frame" height="400px" width="400px" /></p>
 
 <p><br />
 We observe that DHP Softmax provides a 4.7% improvement on test performance
 compared to a finetuned MLP network (refer to the graph above). Also, combining
 DHP Softmax with task-specific consolidation consistently improves performance
-across all tasks <script type="math/tex">T_{n=1:5}</script>.</p>
+across all tasks \(T_{n=1:5}\).</p>
 
 <p><br /><b>Conclusion</b><br />
 We show that catastrophic forgetting can be alleiviated by adding our DHP
@@ -405,7 +405,7 @@ pp. 3987–3995, 2017.</p>
 	<img src="http://localhost:4000/images/jordi.png" class="bio-photo" alt="Vithursan Thangarasa bio photo"></a>
 
 <h3>Vithursan Thangarasa</h3>
-<p>I'm from Toronto, Canada. Currently in the San Francisco Bay Area, California. Passionate about machine learning, computer vision, technology and basketball.</p>
+<p>Originally from Toronto, Canada, and currently based in the San Francisco Bay Area, I am deeply passionate about neural network compression, large-scale foundation models, and enhancing the efficiency of training large neural networks, with a keen interest in generative AI.</p>
 <a href="http://twitter.com/vithursant19" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
 <a href="http://scholar.google.com/citations?user=UUKxm4gAAAAJ&hl=en" class="author-social" target="_blank"><i class="ai ai-google-scholar-square"></i>&nbsp; Google Scholar</a>
 
@@ -434,7 +434,7 @@ pp. 3987–3995, 2017.</p>
 
 <div class="footer-wrap">
   <footer>
-    <span>&copy; 2020 Vithursan Thangarasa. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+    <span>&copy; 2024 Vithursan Thangarasa. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->
