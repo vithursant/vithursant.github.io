@@ -7,13 +7,21 @@ image:
   feature: thesix.jpg
 ---
 
-<i>“I do think it’s important to follow your dreams and do something which you
-are excited by. If you follow your heart and do what you like, you will always
-do much better. It doesn’t matter what your educational qualification is."</i>
-<a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">- Sundar
-Pichai</a>
+<i>“The most important thing is to try and inspire people so that they can be great in whatever they want to do."</i>
+<a href="https://en.wikipedia.org/wiki/Kobe_Bryant" target="_blank">- Kobe
+Bryant</a>
 
 <br />
+Welcome! I'm Vithursan Thangarasa, a dedicated machine learning and artificial intelligence professional with a rich background in engineering systems and computing. My journey in this fascinating field began with my Master of Applied Science from the University of Guelph, focusing on lifelong learning algorithms.
+
+<br />
+Throughout my career, I've had the privilege of contributing to groundbreaking projects at Cerebras Systems, Uber AI Labs, and Tesla, pushing the boundaries of neural network training, computer vision, and deep learning algorithms. My work not only reflects my commitment to innovation but also my passion for solving complex problems with technology.
+
+<br />
+Join me as I continue to explore the limitless possibilities of AI, aiming to
+inspire and be inspired by the ever-evolving machine learning landscape.
+
+<!-- <br />
 I am a Graduate Student Researcher at <a
 href="https://www.uoguelph.ca/engineering/" target="_blank">University of
 Guelph's</a> Machine Learning Research Group (MLRG) and the <a
@@ -42,7 +50,7 @@ continual/lifelong learning algorithms that allow deep neural networks to
 continually evolve over time and dynamically adapt to unseen real-world
 environments, and improve as they operate. I enjoy bridging the gap between
 machine learning research and engineering — combining my technical knowledge
-with my strengths in engineering design.
+with my strengths in engineering design. -->
 
 <br />
 When I'm not in front of a computer screen, I'm probably playing basketball,
